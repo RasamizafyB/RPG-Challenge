@@ -5,25 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/style.css">
     <title>le porg de meuporg</title>
+
+    <!-- Because we're building a game and not a website, it would be better to load the game data first, On a regular website this wouldn't be the case -->
+    <script src='src/js/items.js'></script>
+    <script src='src/js/player.js'></script>
+    <script src='src/js/gamemanager.js'></script>
+    <!-- <script src='src/js/enemy.js'></script> -->
+    <!-- <script src='src/js/actions.js'></script> -->
 </head>
 <body>
     <header>
         <h1>Welcome to PORG</h1>
+        <h2>Choose your character</h2>
     </header>
     <main>
-        <section>
-            display visual /VS/ screen.
+        <section class="interface">
+            <a href="#" onclick="">
+                <img src="src/img/player img/orc.jpg" alt="orc race">
+                <div>
+                    <h3>Orc</h3>
+                    <p>40% more max health</p>
+                </div>
+            </a>
+            <a href="#" onclick="">
+                <img src="src/img/player img/human.jpg" alt="human race">
+                <div>
+                    <h3>Human</h3>
+                    <p>20% less damage taken</p>
+                </div>
+            </a>
+            <a href="#" onclick="">
+                <img src="src/img/player img/elves.jpg" alt="elves race">
+                <div>
+                    <h3>Elves</h3>
+                    <p>30% chance to reflect the attack back to the opponent. They take damage equal to 50% of the original hit.</p>
+                </div>
+            </a>
+            <a href="#" onclick="">
+                <img src="src/img/player img/vampire.jpg" alt="vampire race">
+                <div>
+                    <h3>Vampire</h3>
+                    <p>10% lifesteal from opponents current health at start of the vampire's turn.</p>
+                </div>
+            </a>
         </section>
-        <section>
-            action buttons.
+
+        <section class="actions">
+            
         </section>
+
         <section>
-            creation pannel with items and race choices.
-        </section>
-        <section>
-            logs turn by turn.
+            
+        </section class="arena">
+
+        
+        <section class="enemy">
+            
         </section>
     </main>
-<script src='src/js/main.js'></script>
 </body>
 </html>
