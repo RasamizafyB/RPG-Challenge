@@ -1,1 +1,0 @@
-   item = {SWORD:'sword'}
