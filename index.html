@@ -17,25 +17,49 @@
                 <h1>Welcome</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="perso">
                 <div class="race">
-                    <a href='#' class='orc'><img src='/src/image/orc.jpg'></a>
-                    <a href='#' class='human'><img src='/src/image/humain.jpg'></a>
-                    <a href='#' class='elfe'><img src='/src/image/elfe.jpg'></a>
-                    <a href='#' class='vampire'><img src='/src/image/vampire.jpg'></a>
+                    <img src='/src/image/orc.jpg'  class='orc'>
+                    <img src='/src/image/humain.jpg' class='human'>
+                    <img src='/src/image/elfe.jpg' class='elfe'>
+                    <img src='/src/image/vampire.jpg' class='vampire'>
                 </div>
                 <div class="stat">
 
+                    <a href="#stat-perso" class="modal">Statistique</a>
+
+                    <br>
+
+                    <aside id="stat-perso" class='stat-perso1' aria-hidden='true' role='dialog' style="display:none;">
+                    
+                        <p><strong>HUMANS:</strong> 20% less damage taken</p>
+
+                        <p><strong>ORCS:</strong> 40% more max health</p>
+
+                        <p><strong>ELVES:</strong> 30% chance to deflect the attack 
+                            back to the opponent. The attacker takes damage equal 
+                            to 50% of the original hit. The elf takes no damage.</p>
+            
+                        <p><strong>VAMPIRES:</strong> 10% lifesteal from opponents 
+                            current health at start of the vampire's turn.</p>
+                        
+                        <p><strong>BOOTS:</strong> 30% chance to dodge an attack</p>7
+
+                        <P><strong>STAFF:</strong> 20% increase in healing</P>
+                        
+                        <p><strong>SWORD:</strong> 30% more damage</p>
+
+                        <P><strong>BOW:</strong> 30% chance to attack twice</P>
+                    
+                    </aside>
                 </div>
                 <div class="item">
-                    <a href='#'><img src='src/image/boots.jpg'></a>
-                    <a href='#'><img src='src/image/bow.jpg'></a>
-                    <a href='#'><img src='src/image/sword.png'></a>
-                    <a href='#'><img src='src/image/staff.jpg'></a>
+                    <a href='#' class='boots'><img src='src/image/boots.jpg'></a>
+                    <a href='#'class='bow'><img src='src/image/bow.jpg'></a>
+                    <a href='#'class='sword'><img src='src/image/sword.png'></a>
+                    <a href='#'class='staff'><img src='src/image/staff.jpg'></a>
                 </div>
-            </div>
             <div class="play">
-                <a href="">Play</a>
+                <a href="#">Play</a>
             </div>
         </section>
 
@@ -117,5 +141,6 @@
         </section>
     </main>
 <script src='src/js/main.js'></script>
+<script src='src/js/app.js'></script>
 </body>
 </html>

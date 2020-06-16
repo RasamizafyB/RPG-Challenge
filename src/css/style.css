@@ -2,3 +2,107 @@ body {
   background-image: url(/src/image/wallpaper.jpg);
   background-repeat: no-repeat;
   background-position: center; }
+
+img {
+  max-width: 300px;
+  max-height: 300px; }
+
+header {
+  text-align: center;
+  color: white; }
+  header h1 {
+    font-size: 70px; }
+
+section.home {
+  max-height: 1200px;
+  border: 2px solid white;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 3fr;
+  grid-template-rows: 0.5fr 3fr 0.1fr;
+  grid-gap: 1%;
+  grid-template-areas: 'welcome welcome welcome' 'race stat item' 'play play play'; }
+  section.home .welcome {
+    grid-area: welcome;
+    text-align: center; }
+    section.home .welcome h1 {
+      color: #48cae3;
+      font-size: 50px; }
+    section.home .welcome p {
+      color: white;
+      font-size: larger; }
+  section.home .race {
+    grid-area: race;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    section.home .race .orc {
+      grid-column: 1;
+      grid-row: 1;
+      margin: auto; }
+    section.home .race .human {
+      grid-column: 2;
+      grid-row: 1;
+      margin: auto; }
+    section.home .race .vampire {
+      grid-column: 1;
+      grid-row: 2;
+      margin: auto; }
+    section.home .race .elfe {
+      grid-column: 2;
+      grid-row: 2;
+      margin: auto; }
+  section.home .stat {
+    grid-area: stat;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    section.home .stat a {
+      color: white;
+      padding: 1% 3% 1% 3%;
+      font-size: 30px;
+      font-weight: bolder;
+      background-color: red;
+      text-decoration: none; }
+    section.home .stat .stat-perso1 {
+      color: white;
+      background-color: burlywood;
+      padding: 1%;
+      overflow: auto;
+      max-width: 100px;
+      max-height: 100px; }
+  section.home .item {
+    grid-area: item;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    section.home .item .boots {
+      grid-column: 1;
+      grid-row: 1;
+      margin: auto; }
+    section.home .item .bow {
+      grid-column: 2;
+      grid-row: 1;
+      margin: auto; }
+    section.home .item .sword {
+      grid-column: 1;
+      grid-row: 2;
+      margin: auto; }
+    section.home .item .staff {
+      grid-column: 2;
+      grid-row: 2;
+      margin: auto; }
+  section.home .play {
+    grid-area: play;
+    display: flex;
+    justify-content: center; }
+    section.home .play a {
+      color: white;
+      padding: 1% 3% 1% 3%;
+      font-size: 30px;
+      font-weight: bolder;
+      background-color: red;
+      text-decoration: none; }
