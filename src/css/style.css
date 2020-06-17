@@ -1,302 +1,117 @@
 body {
-    background-image: url(/src/image/wallpaper.jpg);
+  background-image: url(/src/image/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+img {
+  max-width: 300px;
+  max-height: 300px; }
+
+header {
+  text-align: center;
+  color: white; }
+  header h1 {
+    font-size: 80px;
+    font-weight: 700;
+    font-style: italic;
+    background-image: url(https://img3.stockfresh.com/files/d/dvarg/m/27/1857400_stock-photo-bright-fiery-star.jpg);
     background-repeat: no-repeat;
-    background-position: center; }
-  img {
-    max-width: 300px;
-    max-height: 300px; }
-  
-  header {
-    text-align: center;
-    color: white; }
-    header h1 {
-      font-size: 70px;
-      font-weight: 700; }
-  
-  section.home {
-    max-height: 1200px;
-    margin: 20px;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+
+a {
+  background-color: cornsilk; }
+
+.main {
+  display: flex;
+  justify-content: space-around; }
+  .main .player-1 {
     display: grid;
-    grid-template-columns: 3fr 1.5fr 3fr;
-    grid-template-rows: 3fr 0.1fr;
-    grid-gap: 1%;
-    grid-template-areas: 'race welcome item' 'play play play'; }
-    section.home .welcome {
-      grid-area: welcome;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.5fr 5fr 0.5fr 1fr 1fr;
+    grid-template-areas: 'yield name' 'vide player' 'vide health' '. btn'; }
+    .main .player-1 .name {
+      grid-area: name;
       text-align: center;
-      margin-top: 45%; }
-      section.home .welcome h1 {
-        color: #48cae3;
-        font-size: 70px;
-        margin-bottom: 5%; }
-      section.home .welcome p {
-        color: #df7676;
-        font-size: 30px; }
-    section.home .race {
-      grid-area: race;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr; }
-      section.home .race .orc {
-        grid-column: 1;
-        grid-row: 1;
-        margin: auto;
-        position: relative; }
-        section.home .race .orc .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .race .orc .hover:hover {
-            opacity: 1; }
-          section.home .race .orc .hover h2 {
-            margin-top: 55%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-      section.home .race .human {
-        grid-column: 2;
-        grid-row: 1;
-        margin: auto;
-        position: relative; }
-        section.home .race .human .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .race .human .hover:hover {
-            opacity: 1; }
-          section.home .race .human .hover h2 {
-            margin-top: 60%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-      section.home .race .vampire {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 5% 22%;
-        position: relative; }
-        section.home .race .vampire .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .race .vampire .hover:hover {
-            opacity: 1; }
-          section.home .race .vampire .hover h2 {
-            margin-top: 45%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-      section.home .race .elfe {
-        grid-column: 2;
-        grid-row: 2;
-        margin: 5% 24%;
-        position: relative; }
-        section.home .race .elfe .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .race .elfe .hover:hover {
-            opacity: 1; }
-          section.home .race .elfe .hover h2 {
-            margin-top: 45%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-    section.home .item {
-      grid-area: item;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr; }
-      section.home .item .boots {
-        grid-column: 1;
-        grid-row: 1;
-        margin: auto;
-        position: relative; }
-        section.home .item .boots .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .item .boots .hover:hover {
-            opacity: 1; }
-          section.home .item .boots .hover h2 {
-            margin-top: 40%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-      section.home .item .bow {
-        grid-column: 2;
-        grid-row: 1;
-        margin: auto;
-        position: relative; }
-        section.home .item .bow .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .item .bow .hover:hover {
-            opacity: 1; }
-          section.home .item .bow .hover h2 {
-            margin-top: 55%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-      section.home .item .sword {
-        grid-column: 1;
-        grid-row: 2;
-        margin: auto;
-        position: relative; }
-        section.home .item .sword .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .item .sword .hover:hover {
-            opacity: 1; }
-          section.home .item .sword .hover h2 {
-            margin-top: 35%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-      section.home .item .staff {
-        grid-column: 2;
-        grid-row: 2;
-        margin: auto;
-        position: relative; }
-        section.home .item .staff .hover {
-          position: absolute;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          height: 100%;
-          transition: .5s ease;
-          opacity: 0;
-          color: white;
-          text-align: center; }
-          section.home .item .staff .hover:hover {
-            opacity: 1; }
-          section.home .item .staff .hover h2 {
-            margin-top: 40%;
-            font-size: 30px;
-            margin-bottom: 5%; }
-    section.home .play {
-      grid-area: play;
+      margin-top: 5%;
+      padding-top: 10%; }
+      .main .player-1 .name h3 {
+        background-color: white;
+        padding: 3% 5% 3% 5%; }
+    .main .player-1 .img-name {
+      grid-area: player; }
+      .main .player-1 .img-name img {
+        min-height: 500px; }
+    .main .player-1 .health-bar {
+      display: inline;
+      padding-left: 10px; }
+      .main .player-1 .health-bar .file {
+        height: 20px;
+        grid-area: health; }
+    .main .player-1 .action-btn {
+      grid-area: btn;
+      width: 100%;
+      height: 50%;
       display: flex;
-      justify-content: center; }
-      section.home .play a {
-        color: white;
-        padding: 1% 3% 1% 3%;
-        font-size: 30px;
-        font-weight: bolder;
-        background-color: red;
-        text-decoration: none; }
-        section.main {
-            max-height: 1200px;
-            margin: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr 2fr;
-            grid-gap: 1%;
-            grid-template-areas:
-            'player-1 player-1 player-2 player-2'
-            'player-1-character player-1-character player-2-character player-2-character'
-            'file-1 file-1 file-2 file-2'
-            'hit-1 heal-1 hit-2 heal-2'
-            'yield-1 yield-1 yield-2 yield-2'
-            'log-1 log-1 log-2 log-2';
-        }
-        section.main.player-1 {
-            grid-area: player-1
-            position: relative;
-        }
-        section.main.player-2 {
-            grid-area: player-2
-            position: relative;
-        }
-        section.main.player-1-character {
-            grid-area: player-1-character
-            position: relative;
-        }
-        section.main.player-2-character {
-            grid-area: player-2-character
-            position: relative;
-        }
-        section.main.file-1 {
-            grid-area: file-1
-            position: relative;
-        }
-        section.main.file-2 {
-            grid-area: file-2
-            position: relative;
-        }
-        section.main.hit-1 {
-            grid-area: hit-1
-            position: relative;
-        }
-        section.main.heal-1 {
-            grid-area: heal-1
-            position: relative;
-        }
-        section.main.hit-2 {
-            grid-area: hit-2
-            position: relative;
-        }
-        section.main.heal-2 {
-            grid-area: heal-2
-            position: relative;
-        }
-        section.main.yield-1 {
-            grid-area: yield-1
-            position: relative;
-        }
-        section.main.yield-2 {
-            grid-area: yield-2
-            position: relative;
-        }
-        section.main.log-1 {
-            grid-area: log-1
-            position: relative;
-        }
-        section.main.log-2 {
-            grid-area: log-2
-            position: relative;
-        }
+      justify-content: space-around;
+      text-align: center;
+      background-color: white; }
+      .main .player-1 .action-btn .hit {
+        font-size: 40px;
+        display: inline-flex;
+        justify-content: center;
+        width: 43%;
+        border-right: 1px solid black; }
+      .main .player-1 .action-btn .heal {
+        font-size: 40px;
+        display: inline-flex;
+        justify-content: center; }
+    .main .player-1 .yield-btn {
+      width: 160px;
+      height: 500px;
+      background-color: white; }
+  .main .player-2 {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 0.5fr 5fr 0.5fr 1fr 1fr;
+    grid-template-areas: 'yield name' 'vide player' 'vide health' '. btn'; }
+    .main .player-2 .name {
+      grid-area: name;
+      text-align: center;
+      margin-top: 5%;
+      padding-top: 10%; }
+      .main .player-2 .name h3 {
+        background-color: white;
+        padding: 3% 0% 3% 5%; }
+    .main .player-2 .img-name {
+      grid-area: player; }
+      .main .player-2 .img-name img {
+        min-height: 500px; }
+    .main .player-2 .progress {
+      grid-area: health;
+      width: 500px; }
+    .main .player-2 .action-btn {
+      grid-area: btn;
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      background-color: white; }
+      .main .player-2 .action-btn .hit {
+        font-size: 40px;
+        display: inline-flex;
+        justify-content: center;
+        width: 43%;
+        border-right: 1px solid black; }
+      .main .player-2 .action-btn .heal {
+        font-size: 40px;
+        display: inline-flex;
+        justify-content: center; }
+    .main .player-2 .yield-btn {
+      width: 160px;
+      height: 500px;
+      background-color: white; }
+      .main .player-2 .yield-btn .yield-1 {
+        background-color: white; }

@@ -1,0 +1,161 @@
+body {
+    background-image: url(/src/image/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+header {
+    text-align: center;
+    color: white;
+    h1 {
+        font-size: 80px;
+        font-weight: 700;
+        font-style: italic;
+        background-image: url(https://img3.stockfresh.com/files/d/dvarg/m/27/1857400_stock-photo-bright-fiery-star.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+a{
+    background-color: cornsilk;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    .player-1 {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
+        grid-template-rows: 0.5fr 5fr 0.5fr 1fr 1fr;
+        grid-template-areas: 
+        'yield name'
+        'vide player'
+        'vide health'
+        '. btn';
+        .name {
+            grid-area: name;
+            text-align: center;
+            margin-top: 5%;
+            padding-top: 10%;
+            h3 {
+                background-color: white;
+                padding: 3% 5% 3% 5%;
+            }
+        }
+        .img-name {
+            grid-area: player;
+            img {
+                min-height: 500px;
+            }
+        }
+        .health-bar {
+            display: inline;
+            padding-left: 10px;
+            .file{
+                height: 20px;
+                grid-area: health;
+            }
+        }
+        
+        .action-btn {
+            grid-area: btn; 
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            background-color: white;
+            
+            .hit{
+                font-size: 40px;
+                display: inline-flex;
+                justify-content: center;
+                width: 43%;
+                border-right: 1px solid black;
+            }
+            .heal {
+                font-size: 40px;
+                display: inline-flex;
+                justify-content: center;
+                
+            }
+        }
+        .yield-btn {
+            width: 160px;
+            height: 500px;
+            background-color: white;
+
+        }
+
+    }
+    .player-2 {
+        display: grid;
+        grid-template-columns: 0.2fr 0.8fr;
+        grid-template-rows: 0.5fr 5fr 0.5fr 1fr 1fr;
+        grid-template-areas: 
+        'yield name'
+        'vide player'
+        'vide health'
+        '. btn';
+        .name {
+            grid-area: name;
+            text-align: center;
+            margin-top: 5%;
+            padding-top: 10%;
+            h3 {
+                background-color: white;
+                padding: 3% 0% 3% 5%;
+            }
+        }
+        .img-name {
+            grid-area: player;
+            img {
+                min-height: 500px;
+            }
+        }
+        .progress{
+            grid-area: health;
+            width: 500px;
+        }
+        .action-btn {
+            grid-area: btn; 
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            background-color: white;
+            
+            .hit{
+                font-size: 40px;
+                display: inline-flex;
+                justify-content: center;
+                width: 43%;
+                border-right: 1px solid black;
+            }
+            .heal {
+                font-size: 40px;
+                display: inline-flex;
+                justify-content: center;
+                
+            }
+            
+        }
+        .yield-btn {
+            width: 160px;
+            height: 500px;
+            background-color: white;
+            .yield-1 {
+                background-color: white;;
+            }
+
+        }
+
+    }
+    
+}

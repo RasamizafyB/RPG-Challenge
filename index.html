@@ -94,50 +94,64 @@
         
 
         <section class="main">
-            <div class="main-panel">
-                <div class="character-name">
-                    <p class='player-1'>Lorem</p>
-                    <p class="player-2">Ipsum</p>
+
+            <section class="player-1">
+                <div class="name">
+                    <h3>Lorem</h3>
                 </div>
-                    <img src="" alt="" class="player-1-character">
-                    <img src="" alt="" class="player-2-character">
+                <div class="img-name">
+                    <img src="/src/image/humain.jpg" alt="">
                 </div>
-                <div class="health-bar"></div> 
-                    <label for="file-1">Health</label>
-                    <progress class='file-1' id="file-1" value="32" max="100"> 32% </progress>
-                    <label for="file-2">Health</label>
-                    <progress class='file-2' id="file-2" value="32" max="100"> 32% </progress>
+                <div class="health-bar">
+                    <label for="file"></label>
+                    <progress class='file' id="file" value="32" max="100"> 32% </progress>
                 </div>
-                <div class="button">
-                    <button tag="hit-1">
-    
-                    </button>
-                    <button tag="heal-1">
-    
-                    </button>
-                    <button class="hit-2">
-    
-                    </button>
-                    <button class="heal-2">
-    
-                    </button>
-                    <button class="yield-1">
-    
-                    </button>
-                    <button class="yield-2">
-    
-                    </button>
+                <div class="yield-btn">
+                    <a class="yield-1">
+                        Yield
+                    </a>
                 </div>
-                <div class="log">
-                    <p class="log-1"></p>
-                    <p class="log-2"></p>
+                <div class="action-btn">
+                    <a class="hit">
+                        Hit
+                    </a>
+                    <a class="heal">
+                        Heal
+                    </a>
                 </div>
+            </section>
+            <section class="player-2">
+                <div class="name">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="img-name">
+                    <img src="src/image/orc.jpg" alt="">
+                </div>
+                <div class="health-bar">
+                    <label for="file">Health</label>
+                    <progress class='file' id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div class="yield-btn">
+                    <a class="yield-1">
+                        Yield
+                    </a>
+                </div>
+                <div class="action-btn">
+                    <a class="hit">
+                        <p>Hit</p>
+                    </a>
+                    <a class="heal">
+                        <p>Heal </p>
+                    </a>
+                </div>
+            </section>
         </section>
 
-    </main>
-
     <footer>
-
+        <div class="log">
+            <p class="log-1">LOG</p>
+            <p class="log-2">LOG</p>
+        </div>
     </footer>
 
 <script src='src/js/main.js'></script>
