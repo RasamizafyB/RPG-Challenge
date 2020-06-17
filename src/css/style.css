@@ -11,90 +11,213 @@ header {
   text-align: center;
   color: white; }
   header h1 {
-    font-size: 70px; }
+    font-size: 70px;
+    font-weight: 700; }
 
 section.home {
   max-height: 1200px;
-  border: 2px solid white;
   margin: 20px;
   display: grid;
   grid-template-columns: 3fr 1.5fr 3fr;
-  grid-template-rows: 0.5fr 3fr 0.1fr;
+  grid-template-rows: 3fr 0.1fr;
   grid-gap: 1%;
-  grid-template-areas: 'welcome welcome welcome' 'race stat item' 'play play play'; }
+  grid-template-areas: 'race welcome item' 'play play play'; }
   section.home .welcome {
     grid-area: welcome;
-    text-align: center; }
+    text-align: center;
+    margin-top: 45%; }
     section.home .welcome h1 {
       color: #48cae3;
-      font-size: 50px; }
+      font-size: 70px;
+      margin-bottom: 5%; }
     section.home .welcome p {
-      color: white;
-      font-size: larger; }
+      color: #df7676;
+      font-size: 30px; }
   section.home .race {
     grid-area: race;
-    border: 1px solid white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; }
-    section.home .race .orc {
-      grid-column: 1;
-      grid-row: 1;
-      margin: auto; }
-    section.home .race .human {
-      grid-column: 2;
-      grid-row: 1;
-      margin: auto; }
-    section.home .race .vampire {
-      grid-column: 1;
-      grid-row: 2;
-      margin: auto; }
-    section.home .race .elfe {
-      grid-column: 2;
-      grid-row: 2;
-      margin: auto; }
-  section.home .stat {
-    grid-area: stat;
-    border: 1px solid white;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center; }
-    section.home .stat a {
-      color: white;
-      padding: 1% 3% 1% 3%;
-      font-size: 30px;
-      font-weight: bolder;
+    position: relative; }
+    section.home .race a {
       background-color: red;
-      text-decoration: none; }
-    section.home .stat .stat-perso1 {
+      text-decoration: none;
       color: white;
-      background-color: burlywood;
-      padding: 1%;
-      overflow: auto;
-      max-width: 100px;
-      max-height: 100px; }
+      padding: 2% 5%;
+      font-size: 30px;
+      border-radius: 10%;
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+    section.home .race .race-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr; }
+      section.home .race .race-grid .orc {
+        grid-column: 1;
+        grid-row: 1;
+        margin: auto;
+        position: relative; }
+        section.home .race .race-grid .orc .hover {
+          position: absolute;
+          top: 0;
+          color: #f1f1f1;
+          width: 100%;
+          transition: .5s ease;
+          opacity: 0;
+          color: white;
+          text-align: center; }
+          section.home .race .race-grid .orc .hover:hover {
+            opacity: 1; }
+          section.home .race .race-grid .orc .hover h2 {
+            margin-top: 55%;
+            font-size: 30px;
+            margin-bottom: 5%; }
+      section.home .race .race-grid .human {
+        grid-column: 2;
+        grid-row: 1;
+        margin: auto;
+        position: relative; }
+        section.home .race .race-grid .human .hover {
+          position: absolute;
+          top: 0;
+          color: #f1f1f1;
+          width: 100%;
+          transition: .5s ease;
+          opacity: 0;
+          color: white;
+          text-align: center; }
+          section.home .race .race-grid .human .hover:hover {
+            opacity: 1; }
+          section.home .race .race-grid .human .hover h2 {
+            margin-top: 60%;
+            font-size: 30px;
+            margin-bottom: 5%; }
+      section.home .race .race-grid .vampire {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 5% 22%;
+        position: relative; }
+        section.home .race .race-grid .vampire .hover {
+          position: absolute;
+          top: 0;
+          color: #f1f1f1;
+          width: 100%;
+          transition: .5s ease;
+          opacity: 0;
+          color: white;
+          text-align: center; }
+          section.home .race .race-grid .vampire .hover:hover {
+            opacity: 1; }
+          section.home .race .race-grid .vampire .hover h2 {
+            margin-top: 45%;
+            font-size: 30px;
+            margin-bottom: 5%; }
+      section.home .race .race-grid .elfe {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 5% 24%;
+        position: relative; }
+        section.home .race .race-grid .elfe .hover {
+          position: absolute;
+          top: 0;
+          color: #f1f1f1;
+          width: 100%;
+          transition: .5s ease;
+          opacity: 0;
+          color: white;
+          text-align: center; }
+          section.home .race .race-grid .elfe .hover:hover {
+            opacity: 1; }
+          section.home .race .race-grid .elfe .hover h2 {
+            margin-top: 45%;
+            font-size: 30px;
+            margin-bottom: 5%; }
   section.home .item {
     grid-area: item;
-    border: 1px solid white;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; }
     section.home .item .boots {
       grid-column: 1;
       grid-row: 1;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
+      section.home .item .boots .hover {
+        position: absolute;
+        top: 0;
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        text-align: center; }
+        section.home .item .boots .hover:hover {
+          opacity: 1; }
+        section.home .item .boots .hover h2 {
+          margin-top: 40%;
+          font-size: 30px;
+          margin-bottom: 5%; }
     section.home .item .bow {
       grid-column: 2;
       grid-row: 1;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
+      section.home .item .bow .hover {
+        position: absolute;
+        top: 0;
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        text-align: center; }
+        section.home .item .bow .hover:hover {
+          opacity: 1; }
+        section.home .item .bow .hover h2 {
+          margin-top: 55%;
+          font-size: 30px;
+          margin-bottom: 5%; }
     section.home .item .sword {
       grid-column: 1;
       grid-row: 2;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
+      section.home .item .sword .hover {
+        position: absolute;
+        top: 0;
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        text-align: center; }
+        section.home .item .sword .hover:hover {
+          opacity: 1; }
+        section.home .item .sword .hover h2 {
+          margin-top: 35%;
+          font-size: 30px;
+          margin-bottom: 5%; }
     section.home .item .staff {
       grid-column: 2;
       grid-row: 2;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
+      section.home .item .staff .hover {
+        position: absolute;
+        top: 0;
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        text-align: center; }
+        section.home .item .staff .hover:hover {
+          opacity: 1; }
+        section.home .item .staff .hover h2 {
+          margin-top: 40%;
+          font-size: 30px;
+          margin-bottom: 5%; }
   section.home .play {
     grid-area: play;
     display: flex;
