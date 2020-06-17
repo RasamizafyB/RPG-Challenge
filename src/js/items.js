@@ -22,7 +22,7 @@ class staff extends item {
 
 class bow extends item {
     constructor() {
-        super('bow', 10, 10, 'damage twice')
+        super('bow', 10, 10, '30% damage twice')
     };
 };
 
