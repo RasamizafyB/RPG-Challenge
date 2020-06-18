@@ -16,7 +16,7 @@ if (textArray != textArray.length) {
 } else {
     document.querySelector('.target').innerText = '';
 }
-
+ 
 
 
 // palyer selections

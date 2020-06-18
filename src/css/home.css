@@ -1,0 +1,445 @@
+html {
+  background-image: url(/src/image/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+img {
+  max-width: 300px;
+  max-height: 300px; }
+
+header {
+  text-align: center;
+  color: white; }
+  header h1 {
+    margin: 0%;
+    font-size: 80px;
+    font-size: 80px;
+    font-weight: 700;
+    font-style: italic;
+    background-image: url(https://img3.stockfresh.com/files/d/dvarg/m/27/1857400_stock-photo-bright-fiery-star.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+
+section.home {
+  max-width: 1920px;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 3fr;
+  grid-template-rows: 3fr 0.1fr;
+  grid-template-areas: 'race welcome race2' 'item play item2'; }
+  section.home .welcome {
+    grid-area: welcome;
+    text-align: center;
+    background-image: url(/src/image/rustic.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20%;
+    padding: 20% 5% 5% 5%;
+    overflow: auto;
+    font-style: italic; }
+    section.home .welcome h1 {
+      color: #48cae3;
+      font-size: 70px;
+      margin-bottom: 2%; }
+    section.home .welcome p {
+      color: black;
+      font-size: 30px;
+      padding: 5%;
+      text-align: justify; }
+  section.home .race {
+    grid-area: race;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    section.home .race .orc {
+      grid-column: 1;
+      grid-row: 1;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race .orc img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race .orc img:hover {
+          border: 15px solid #303030; }
+      section.home .race .orc .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race .orc .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 100%;
+          color: #004b00; }
+    section.home .race .human {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race .human img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race .human img:hover {
+          border: 15px solid #303030; }
+      section.home .race .human .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race .human .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 112%;
+          color: #5f4827; }
+    section.home .race .vampire {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race .vampire img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race .vampire img:hover {
+          border: 15px solid #303030; }
+      section.home .race .vampire .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race .vampire .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 90%;
+          color: #949494; }
+        section.home .race .vampire .hover p {
+          padding-left: 5%;
+          padding-right: 5%; }
+    section.home .race .elfe {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race .elfe img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race .elfe img:hover {
+          border: 15px solid #303030; }
+      section.home .race .elfe .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race .elfe .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 80%;
+          color: #b347a1; }
+        section.home .race .elfe .hover p {
+          padding-left: 6%;
+          padding-right: 6%; }
+  section.home .item {
+    grid-area: item;
+    display: flex;
+    justify-content: space-between; }
+    section.home .item img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      border: 5px solid dimgray; }
+      section.home .item img:hover {
+        border: 5px solid white; }
+    section.home .item .boots {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item .boots .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item .boots:hover .hover {
+        visibility: visible; }
+    section.home .item .bow {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item .bow .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item .bow:hover .hover {
+        visibility: visible; }
+    section.home .item .sword {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item .sword .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item .sword:hover .hover {
+        visibility: visible; }
+    section.home .item .staff {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item .staff .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item .staff:hover .hover {
+        visibility: visible; }
+  section.home .race2 {
+    grid-area: race2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    section.home .race2 .orc {
+      grid-column: 1;
+      grid-row: 1;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race2 .orc img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race2 .orc img:hover {
+          border: 15px solid #303030; }
+      section.home .race2 .orc .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race2 .orc .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 100%;
+          color: #004b00; }
+    section.home .race2 .human {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race2 .human img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race2 .human img:hover {
+          border: 15px solid #303030; }
+      section.home .race2 .human .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race2 .human .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 112%;
+          color: #5f4827; }
+    section.home .race2 .vampire {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race2 .vampire img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race2 .vampire img:hover {
+          border: 15px solid #303030; }
+      section.home .race2 .vampire .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race2 .vampire .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 90%;
+          color: #949494; }
+        section.home .race2 .vampire .hover p {
+          padding-left: 5%;
+          padding-right: 5%; }
+    section.home .race2 .elfe {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 2% auto;
+      position: relative; }
+      section.home .race2 .elfe img {
+        border: 15px solid black;
+        border-radius: 6%; }
+        section.home .race2 .elfe img:hover {
+          border: 15px solid #303030; }
+      section.home .race2 .elfe .hover {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center; }
+        section.home .race2 .elfe .hover h2 {
+          margin-top: 7%;
+          font-size: 30px;
+          font-weight: 800;
+          margin-bottom: 80%;
+          color: #b347a1; }
+        section.home .race2 .elfe .hover p {
+          padding-left: 6%;
+          padding-right: 6%; }
+  section.home .item2 {
+    grid-area: item2;
+    display: flex;
+    justify-content: space-between; }
+    section.home .item2 img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      border: 5px solid dimgray; }
+      section.home .item2 img:hover {
+        border: 5px solid #f8f8f8; }
+    section.home .item2 .boots {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item2 .boots .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item2 .boots:hover .hover {
+        visibility: visible; }
+    section.home .item2 .bow {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item2 .bow .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item2 .bow:hover .hover {
+        visibility: visible; }
+    section.home .item2 .sword {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item2 .sword .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%; }
+      section.home .item2 .sword:hover .hover {
+        visibility: visible; }
+    section.home .item2 .staff {
+      margin: 2% auto;
+      position: relative; }
+      section.home .item2 .staff .hover {
+        visibility: hidden;
+        width: 120px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: 50%;
+        left: -50%; }
+      section.home .item2 .staff:hover .hover {
+        visibility: visible; }
+  section.home .play {
+    grid-area: play;
+    position: relative; }
+    section.home .play a {
+      position: absolute;
+      top: 30%;
+      left: 29%;
+      color: white;
+      padding: 2% 5% 2% 5%;
+      font-size: 50px;
+      font-weight: bolder;
+      background-color: red;
+      text-decoration: none;
+      border-radius: 5px; }
