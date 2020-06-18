@@ -1,3 +1,12 @@
+h1 {
+  margin: 0%; }
+
+h2 {
+  margin: 0%; }
+
+p {
+  margin: 0%; }
+
 html {
   background-image: url(/src/image/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -35,19 +44,20 @@ section.home {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: 20%;
-    padding: 20% 5% 5% 5%;
+    padding: 15% 5% 5% 5%;
     overflow: auto;
     font-style: italic; }
     section.home .welcome h1 {
       color: #48cae3;
       font-size: 70px;
-      margin-bottom: 2%; }
+      margin-top: 20%;
+      margin-bottom: 0%; }
     section.home .welcome p {
       color: black;
       font-size: 30px;
-      padding: 5%;
-      text-align: justify; }
+      padding: 2% 7% 2% 7%;
+      text-align: justify;
+      margin: 0; }
   section.home .race {
     grid-area: race;
     display: grid;
@@ -56,7 +66,7 @@ section.home {
     section.home .race .orc {
       grid-column: 1;
       grid-row: 1;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race .orc img {
         border: 15px solid black;
@@ -80,7 +90,7 @@ section.home {
     section.home .race .human {
       grid-column: 2;
       grid-row: 1;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race .human img {
         border: 15px solid black;
@@ -104,7 +114,7 @@ section.home {
     section.home .race .vampire {
       grid-column: 1;
       grid-row: 2;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race .vampire img {
         border: 15px solid black;
@@ -123,7 +133,7 @@ section.home {
           margin-top: 7%;
           font-size: 30px;
           font-weight: 800;
-          margin-bottom: 90%;
+          margin-bottom: 85%;
           color: #949494; }
         section.home .race .vampire .hover p {
           padding-left: 5%;
@@ -131,7 +141,7 @@ section.home {
     section.home .race .elfe {
       grid-column: 2;
       grid-row: 2;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race .elfe img {
         border: 15px solid black;
@@ -150,7 +160,7 @@ section.home {
           margin-top: 7%;
           font-size: 30px;
           font-weight: 800;
-          margin-bottom: 80%;
+          margin-bottom: 75%;
           color: #b347a1; }
         section.home .race .elfe .hover p {
           padding-left: 6%;
@@ -167,12 +177,13 @@ section.home {
       section.home .item img:hover {
         border: 5px solid white; }
     section.home .item .boots {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item .boots .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -180,17 +191,18 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item .boots:hover .hover {
         visibility: visible; }
     section.home .item .bow {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item .bow .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -198,17 +210,18 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item .bow:hover .hover {
         visibility: visible; }
     section.home .item .sword {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item .sword .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -216,17 +229,18 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item .sword:hover .hover {
         visibility: visible; }
     section.home .item .staff {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item .staff .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -234,7 +248,7 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item .staff:hover .hover {
         visibility: visible; }
@@ -246,7 +260,7 @@ section.home {
     section.home .race2 .orc {
       grid-column: 1;
       grid-row: 1;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race2 .orc img {
         border: 15px solid black;
@@ -270,7 +284,7 @@ section.home {
     section.home .race2 .human {
       grid-column: 2;
       grid-row: 1;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race2 .human img {
         border: 15px solid black;
@@ -294,7 +308,7 @@ section.home {
     section.home .race2 .vampire {
       grid-column: 1;
       grid-row: 2;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race2 .vampire img {
         border: 15px solid black;
@@ -313,7 +327,7 @@ section.home {
           margin-top: 7%;
           font-size: 30px;
           font-weight: 800;
-          margin-bottom: 90%;
+          margin-bottom: 85%;
           color: #949494; }
         section.home .race2 .vampire .hover p {
           padding-left: 5%;
@@ -321,7 +335,7 @@ section.home {
     section.home .race2 .elfe {
       grid-column: 2;
       grid-row: 2;
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .race2 .elfe img {
         border: 15px solid black;
@@ -340,7 +354,7 @@ section.home {
           margin-top: 7%;
           font-size: 30px;
           font-weight: 800;
-          margin-bottom: 80%;
+          margin-bottom: 75%;
           color: #b347a1; }
         section.home .race2 .elfe .hover p {
           padding-left: 6%;
@@ -357,12 +371,13 @@ section.home {
       section.home .item2 img:hover {
         border: 5px solid #f8f8f8; }
     section.home .item2 .boots {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item2 .boots .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -370,17 +385,18 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item2 .boots:hover .hover {
         visibility: visible; }
     section.home .item2 .bow {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item2 .bow .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -388,17 +404,18 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item2 .bow:hover .hover {
         visibility: visible; }
     section.home .item2 .sword {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item2 .sword .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -406,17 +423,18 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%; }
       section.home .item2 .sword:hover .hover {
         visibility: visible; }
     section.home .item2 .staff {
-      margin: 2% auto;
+      margin: 1% auto;
       position: relative; }
       section.home .item2 .staff .hover {
         visibility: hidden;
         width: 120px;
         background-color: white;
+        border: 2px solid black;
         color: black;
         font-weight: bolder;
         text-align: center;
@@ -424,7 +442,7 @@ section.home {
         padding: 5px 0;
         position: absolute;
         z-index: 1;
-        top: -60%;
+        top: -70%;
         left: 50%;
         left: -50%; }
       section.home .item2 .staff:hover .hover {

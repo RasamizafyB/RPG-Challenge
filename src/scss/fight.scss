@@ -33,6 +33,15 @@
     text-decoration: none;
     color: black;
 }
+h1{
+    margin: 0%;
+}
+h2{
+    margin: 0%;
+}
+p{
+    margin: 0%;
+}
 body {
     background-image: url(../image/wallpaper.jpg);
     background-repeat: no-repeat;
@@ -59,7 +68,7 @@ header {
     .player-1 {
         display: grid;
         grid-template-columns: 0.5fr 5fr;
-        grid-template-rows: 0.15fr 5fr 0.1fr 0.15fr;
+        grid-template-rows: 0.10fr 1fr 0.1fr 0.15fr;
         grid-template-areas: 
         'yield name'
         'vide player'
@@ -116,10 +125,17 @@ header {
         }
 
     }
+    .vs{
+        display: flex;
+        align-items: center;
+        img{
+            width: 300px; 
+        }
+    }
     .player-2 {
         display: grid;
         grid-template-columns: 5fr 0.5fr ;
-        grid-template-rows: 0.15fr 5fr 0.07fr 0.15fr;
+        grid-template-rows: 0.10fr 1fr 0.07fr 0.15fr;
         grid-template-areas: 
         'name yield'
         'player vide'

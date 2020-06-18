@@ -19,13 +19,14 @@ $vampire : rgb(148, 148, 148);
     margin-bottom: $bottom;
 }
 @mixin position {
-    margin: 2% auto;
+    margin: 1% auto;
     position: relative;
 }
 @mixin hoverItem {
     visibility: hidden;
     width: 120px;
     background-color: white;
+    border: 2px solid black;
     color: black;
     font-weight: bolder;
     text-align: center;
@@ -33,7 +34,7 @@ $vampire : rgb(148, 148, 148);
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    top: -60%;
+    top: -70%;
     left: 50%;
 }
 @mixin imgBorder {
@@ -42,6 +43,15 @@ $vampire : rgb(148, 148, 148);
     &:hover{
         border: 15px solid rgb(48, 48, 48);
     }
+}
+h1{
+    margin: 0%;
+}
+h2{
+    margin: 0%;
+}
+p{
+    margin: 0%;
 }
 
 html {
@@ -87,20 +97,21 @@ section.home {
         background-position: center;
         background-repeat: no-repeat; 
         background-size: contain; 
-        margin-top: 20%;
-        padding: 20% 5% 5% 5%;
+        padding: 15% 5% 5% 5%;
         overflow: auto;
         font-style: italic;
         h1 {
             color: #48cae3; 
             font-size: 70px;
-            margin-bottom: 2%;   
+            margin-top: 20%;
+            margin-bottom: 0%;  
         }
         p{
-            color: black;
+            color: black; 
             font-size: 30px; 
-            padding: 5%;  
-            text-align: justify;      
+            padding: 2% 7% 2% 7%;  
+            text-align: justify; 
+            margin: 0;     
         }
     }
     .race  {
@@ -148,7 +159,7 @@ section.home {
             .hover{
                 @include hover();
                 h2{
-                    @include h2(90%);
+                    @include h2(85%);
                     color: $vampire;
                 }
                 p{
@@ -167,7 +178,7 @@ section.home {
             .hover{
                 @include hover();
                 h2{
-                    @include h2(80%);
+                    @include h2(75%);
                     color: $elve;
                 }
                 p{
@@ -274,7 +285,7 @@ section.home {
             .hover{
                 @include hover();
                 h2{
-                    @include h2(90%);
+                    @include h2(85%);
                     color: $vampire;
                 }
                 p{
@@ -293,7 +304,7 @@ section.home {
             .hover{
                 @include hover();
                 h2{
-                    @include h2(80%);
+                    @include h2(75%);
                     color: $elve;
                 }
                 p{
