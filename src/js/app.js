@@ -17,46 +17,68 @@
         var tiner = setInterval(loop, 100)
     } else {
         document.querySelector('.target').innerText = '';
-    }    
+    }
 //})();
 
 
-let clickOrc
-let clickHuman
-let clickVampire
-let clickElfe
-
-
-document.querySelector('.orc1').addEventListener('click', function(){
-     clickOrc = true;
-    
-})
-if(clickOrc == true){
-    document.querySelector('img').style.borderColor = 'brown'
-} else if(clickHuman = true){
-    document.querySelector('img').style.borderColor = 'black'
+//function to reset the color if something else is picked.
+function playerOnePickedRace(race) {
+    if(selectedRace1) { // remove the existing highlight if any
+    selectedRace1.target.style.borderColor = 'black';
+}
+    selectedRace1 = race;
+    selectedRace1.target.style.borderColor = 'brown';
 }
 
-document.querySelector('.human1').addEventListener('click', function(){
-     clickHuman = true;
-    if(clickHuman == true){
-        document.querySelector('.human1 img').style.borderColor = 'brown'
+
+function playerTwoPickedRace(race) {
+    if(selectedRace2) {
+    selectedRace2.target.style.borderColor = 'black';
+}
+    selectedRace2 = race;
+    selectedRace2.target.style.borderColor = 'blue';
+}
+
+function playerOnePickedItem(item) {
+    if(selectedItem1) {
+    selectedItem1.target.style.borderColor = '#888'
     }
-})
+    selectedItem1 = item
+    selectedItem1.target.style.borderColor = 'brown'
+}
 
-document.querySelector('.vampire1').addEventListener('click', function(){
-     clickVampire = true;
-    if(clickVampire == true){
-        document.querySelector('.vampire1 img').style.borderColor = 'brown'
-    }
-})
+const races1 = document.querySelector('.race');
+let selectedRace1;
 
-document.querySelector('.elfe1').addEventListener('click', function(){
-    let clickElfe = true;
-    if(clickElfe == true){
-        document.querySelector('.elfe1 img').style.borderColor = 'brown'
-    }
-})
+const races2 = document.querySelector('.race2');
+let selectedRace2;
 
+const item1 = document.querySelector('.item');
+let selectedItem1;
 
+    //player one select race
+races1.addEventListener('click', (element) => {
 
+    element.target.style.borderColor = 'brown';
+    console.log(element.target);
+
+    playerOnePickedRace(element);
+});
+
+    //player two select race
+races2.addEventListener('click', (element) => {
+
+    element.target.style.borderColor = 'brown';
+    console.log(element.target);
+
+    playerTwoPickedRace(element);
+});
+
+    //player one select item
+item1.addEventListener('click', (element) => {
+
+    element.target.style.borderColor = 'brown';
+    console.log(element.target);
+
+    playerOnePickedItem(element);
+});
