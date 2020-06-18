@@ -1,0 +1,211 @@
+
+@mixin nameH3 {
+    padding: 5%;
+    font-size: 30px;
+    border: 5px solid #997d00;
+    //font-family: "Medieval";
+    text-shadow:   1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+@font-face {
+    font-family: "Medieval";
+    src: url("src/font/Berkahi Blackletter.ttf");
+   }
+@mixin img {
+    max-height: 500px;
+    border: 15px solid black; 
+    border-radius: 5%;
+}
+@mixin actionBTN {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+@mixin hit {
+    background-color: rgb(104, 36, 36) ;
+    border: 1px solid rgb(235, 213, 90);
+}
+@mixin heild {
+    background-color: rgb(136, 78, 30) ;
+    border: 1px solid rgb(235, 213, 90);
+}
+@mixin yield {
+    background-color: red;
+    padding: 10% 15%;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+body {
+    background-image: url(../image/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// img {
+//     max-width: 300px;
+//     max-height: 300px;
+// }
+header {
+    text-align: center;
+    color: white;
+    h1 {
+        font-size: 80px;
+        font-weight: 700;
+        font-style: italic;
+        background-image: url(https://img3.stockfresh.com/files/d/dvarg/m/27/1857400_stock-photo-bright-fiery-star.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text; 
+    }
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    .player-1 {
+        display: grid;
+        grid-template-columns: 0.5fr 5fr;
+        grid-template-rows: 0.15fr 5fr 0.1fr 0.15fr;
+        grid-template-areas: 
+        'yield name'
+        'vide player'
+        'vide health'
+        'vide btn';
+        .name {
+            grid-area: name;
+            text-align: center;
+            h3 {
+                @include nameH3();
+                background-color: rgb(255, 102, 0);
+            }
+        }
+        .img-name {
+            grid-area: player;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                @include img();
+            }
+        }
+        .health-bar {
+            grid-area: health;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .file{
+                height: 20px;
+                width: 100%;
+            }
+        }
+        
+        .action-btn {
+            grid-area: btn; 
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .hit{
+                @include actionBTN();
+                @include hit();
+            }
+            .heal {
+                @include actionBTN(); 
+                @include heild(); 
+            }
+        }
+        .yield-btn {
+            grid-area: yield;
+            width: 50px;
+            a{
+                @include yield();
+            }
+        }
+
+    }
+    .player-2 {
+        display: grid;
+        grid-template-columns: 5fr 0.5fr ;
+        grid-template-rows: 0.15fr 5fr 0.07fr 0.15fr;
+        grid-template-areas: 
+        'name yield'
+        'player vide'
+        'health vide'
+        'btn vide';
+        .name {
+            grid-area: name;
+            text-align: center;
+            h3 {
+                @include nameH3();
+                background-color: rgb(0, 94, 117);
+            }
+        }
+        .img-name {
+            grid-area: player;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                @include img();
+            }
+        }
+        .health-bar {
+            grid-area: health;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .file{
+                height: 20px;
+                width: 100%;
+            }
+        }
+        
+        .action-btn {
+            grid-area: btn; 
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .hit{
+                @include actionBTN();
+                @include hit();
+            }
+            .heal {
+                @include actionBTN(); 
+                @include heild(); 
+            }
+        }
+        .yield-btn {
+            grid-area: yield;
+            width: 50px;
+            text-align: right;
+            a{
+                @include yield();
+            }
+        }
+
+    }
+    
+}
+.log{
+    border: 2px solid white;
+    margin: -5% 37% 0% 37%;
+    height: 230px;
+    h1{
+        border-bottom: 2px solid white;
+        color: white;
+        font-size: larger;
+        text-align: center;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+    .log-flow{
+        overflow: auto;
+        height: 205px;
+        p{
+            color: white;
+        }
+    }
+    
+}
