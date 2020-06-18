@@ -12,145 +12,94 @@
         <h1>MEUPORG</h1>
     </header>
     <main>
-        <section class="home" style="display: none;">
-                <div class="welcome">
-                    <h1>Welcome</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor 
-                        sit amet consectetur adipisicing elit. Veniam, molestias earum tenetur µ
-                        necessitatibus nihil at optio aliquid repellat quaerat, quis, 
-                        fuga excepturi sint neque sit alias. Ab aliquam cupiditate quisquam..</p>
-                </div>
-                <div class="race">
-                            <div class='orc'> 
-                                <a href="#" class='orc1'><img src='/src/image/orc.jpg'></a> 
-                                <div class="hover">
-                                    <h2>ORCS</h2> 
-                                    <p>40% more max health</p>
-                                </div>  
-                            </div>
-                            <div class='human'>
-                                <a href="#" class='human1'><img src='/src/image/humain.jpg'></a>
-                                <div class="hover">
-                                    <h2>HUMANS</h2> 
-                                    <p>20% less damage taken</p>
-                                </div>
-                            </div>
-                            <div class='elfe'>
-                                <a href="#" class='elfe1'><img src='/src/image/elfe.jpg'></a>
-                                <div class="hover">
-                                    <h2>ELVES</h2> 
-                                    <p>30% chance to deflect the attack 
-                                        back to the opponent. The attacker takes damage equal 
-                                        to 50% of the original hit. The elf takes no damage.</p>
-                                </div>
-                            </div>
-                            <div class='vampire'>
-                                <a href="#" class='vampire1'><img src='/src/image/vampire.jpg'></a>
-                                <div class="hover">
-                                    <h2>VAMPIRES</h2> 
-                                    <p>10% lifesteal from opponents 
-                                        current health at start of the vampire's turn.</p>
-                                </div>
-                                
-                            </div>
-                </div>
-
-                <div class="item">
-
-                    <div class='boots'> 
-                        <a href="#" class='boots1'><img src='src/image/boots.jpg'></a>
-                        <div class="hover">
-                            <h2>BOOTS</h2> 
-                            <p>30% chance to dodge an attack</p>
-                        </div>
-                    </div>
-                    <div class='bow'>
-                        <a href="#" class='bow1'><img src='src/image/bow.jpg'></a>
-                        <div class="hover">
-                            <h2>STAFF</h2> 
-                            <p>20% increase in healing</p>
-                        </div>
-                    </div>
-                    <div class='sword'>
-                        <a href="#" class='sword1'><img src='src/image/sword.png'></a>
-                        <div class="hover">
-                            <h2>SWORD</h2> 
-                            <p>30% more damage</p>
-                        </div>
-                    </div>
-                    <div class='staff'>
-                        <a href="#" class='staff1'><img src='src/image/staff.jpg'></a>
-                        <div class="hover">
-                            <h2>BOW</h2> 
-                            <p>30% chance to attack twice</p>
-                        </div>
-                    </div>  
-
-                </div>
-            <div class="play">
-                <a href="#">Play</a>
-            </div>
-        </section>
-        
+                
+        <!--Fight page-->
 
         <section class="main">
+
+            <!--player 1-->
 
             <section class="player-1">
                 <div class="name">
                     <h3>Lorem</h3>
                 </div>
                 <div class="img-name">
-                    <img src="/src/image/humain.jpg" alt="">
+                    <img src="src/image/humain.jpg" alt="">
+                </div>
+                <div class="health-bar">
+                    <label for="file"></label> 
+                    <progress class='file' id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div class="yield-btn">
+                    <a href="#" class="yield-1">X</a>
+                </div>
+                <div class="action-btn">
+                    <a href="#" class="hit">Hit</a>
+                    <a href="#" class="heal">Heal</a>
+                    
+                </div>
+            </section>
+
+            <!--VS
+
+            <section>
+                <img src="" alt="">
+            </section>
+            -->
+            <!--player 2-->
+
+            <section class="player-2">
+                <div class="name">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="img-name">
+                    <img src="src/image/humain.jpg" alt="">
                 </div>
                 <div class="health-bar">
                     <label for="file"></label>
                     <progress class='file' id="file" value="32" max="100"> 32% </progress>
                 </div>
                 <div class="yield-btn">
-                    <a class="yield-1">
-                        Yield
-                    </a>
+                    <a href="#" class="yield-1">X</a>
                 </div>
                 <div class="action-btn">
-                    <a class="hit">
-                        Hit
-                    </a>
-                    <a class="heal">
-                        Heal
-                    </a>
-                </div>
-            </section>
-            <section class="player-2">
-                <div class="name">
-                    <h3>Lorem</h3>
-                </div>
-                <div class="img-name">
-                    <img src="src/image/orc.jpg" alt="">
-                </div>
-                <div class="health-bar">
-                    <label for="file">Health</label>
-                    <progress class='file' id="file" value="32" max="100"> 32% </progress>
-                </div>
-                <div class="yield-btn">
-                    <a class="yield-1">
-                        Yield
-                    </a>
-                </div>
-                <div class="action-btn">
-                    <a class="hit">
-                        <p>Hit</p>
-                    </a>
-                    <a class="heal">
-                        <p>Heal </p>
-                    </a>
+                    <a href="#" class="hit">Hit</a>
+                    <a href="#" class="heal">Heal</a>
                 </div>
             </section>
         </section>
 
+    <!--LOG-->
+
     <footer>
         <div class="log">
-            <p class="log-1">LOG</p>
-            <p class="log-2">LOG</p>
+            <h1>Evenement</h1>
+            <div class="log-flow">
+                <p>log ihdg!yzgçdsjbczouefhç! eihjfpokefj</p>
+                <p>logi hdg!yzgçdsjbczouefhç !eihjfpokefj</p>
+                <p>logih dg!yzgçdsjbczouefh ç!eihjfpokefj</p>
+                <p>logihd g!yzgçdsjbczouef hç!eihjfpokefj</p>
+                <p>logihdg !yzgçdsjbczoue fhç!eihjfpokefj</p>
+                <p>logihdg! yzgçdsjbczou efhç!eihjfpokefj</p>
+                <p>logihdg!y zgçdsjbczo uefhç!eihjfpokefj</p>
+                <p>logihdg!yz gçdsjbcz ouefhç!eihjfpokefj</p>
+                <p>logihdg!yzg çdsjbc zouefhç!eihjfpokefj</p>
+                <p>logihdg!yzgç dsjb czouefhç!eihjfpokefj</p>
+                <p>logihdg!yzgçd sj bczouefhç!eihjfpokefj</p>
+                <p>logihdg!yzgçds  jbczouefhç!eihjfpokefj</p>
+                <p>logihdg!yzgçds j bczouefhç!eihjfpokefj</p>
+                <p>logihdg!yzgçd sjb czouefhç!eihjfpokefj</p>
+                <p>logihdg!yzgç dsjbc zouefhç!eihjfpokefj</p>
+                <p>logihdg!yzg çdsjbcz ouefhç!eihjfpokefj</p>
+                <p>logihdg!yz gçdsjbczo uefhç!eihjfpokefj</p>
+                <p>logihdg!y zgçdsjbczou efhç!eihjfpokefj</p>
+                <p>logihdg! yzgçdsjbczoue fhç!eihjfpokefj</p>
+                <p>logihdg !yzgçdsjbczouef hç!eihjfpokefj</p>
+                <p>logihd g!yzgçdsjbczouefh ç!eihjfpokefj</p>
+                <p>logih dg!yzgçdsjbczouefhç !eihjfpokefj</p>
+                <p>logi hdg!yzgçdsjbczouefhç! eihjfpokefj</p>
+                <p>log ihdg!yzgçdsjbczouefhç!e ihjfpokefj</p>  
+            </div>
         </div>
     </footer>
 
