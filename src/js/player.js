@@ -57,19 +57,16 @@ class player {
         return (outputDamage);
     };
 
-    // target.currenthealth += 
-
     initChar() {
         console.log(`im the ${this.race}, I wield a ${this.item.name}, my maximum health point are ${this.currenthealth}`);
-    }
-}
+    };
+};
 
 class orc extends player {
     constructor(item) {
         super(item, 'orc', 140, 140);
     };
 };
-
 
 class elf extends player {
     constructor(item) {
@@ -95,7 +92,8 @@ class vampire extends player {
         } else {
             this.currenthealth += (target.currenthealth / 100) * 10;
             console.log(`${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
-        }
-    }
+        };
+    };
 
 };
+

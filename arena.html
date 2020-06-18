@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="src/css/arena.css">
     <link rel="stylesheet" href="src/css/reset.css">
     <title>le porg de meuporg</title>
+
+    <script src='src/js/items.js'></script>
+    <script src='src/js/player.js'></script>
+    <script src='src/js/gamemanager.js'></script>
 </head>
 <body>
     <header>
@@ -34,7 +38,7 @@
                     <a href="#" class="yield-1">X</a>
                 </div>
                 <div class="action-btn">
-                    <a href="#" class="hit">Hit</a>
+                    <a href="#" class="hit" onclick="turn()">Hit</a>
                     <a href="#" class="heal">Heal</a>
                     
                 </div>
@@ -102,9 +106,5 @@
             </div>
         </div>
     </footer>
-
-<script src='src/js/main.js'></script>
-<script src='src/js/app.js'></script>
-
 </body>
 </html>
