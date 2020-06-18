@@ -1,6 +1,6 @@
 class player {
-    constructor(name, item, race, currenthealth, maxHealth) {
-        this.name = name;
+    constructor(item, race, currenthealth, maxHealth) {
+        // this.name = name;
         this.item = item;
         this.race = race;
         this.currenthealth = currenthealth;
@@ -60,41 +60,41 @@ class player {
     // target.currenthealth += 
 
     initChar() {
-        console.log(`I am ${this.name}, i am a ${this.race}, I wield a ${this.item.name}, my maximum health point are ${this.currenthealth}`);
+        console.log(`im the ${this.race}, I wield a ${this.item.name}, my maximum health point are ${this.currenthealth}`);
     }
 }
 
 class orc extends player {
-    constructor(name, item) {
-        super(name, item, 'orc', 140, 140);
+    constructor(item) {
+        super(item, 'orc', 140, 140);
     };
 };
 
 
 class elf extends player {
-    constructor(name, item) {
-        super(name, item, 'elf', 100, 100);
+    constructor(item) {
+        super(item, 'elf', 100, 100);
     };
 };
 
 class human extends player {
-    constructor(name, item) {
-        super(name, item, 'human', 100, 100);
+    constructor(item) {
+        super(item, 'human', 100, 100);
     };
 };
 
 class vampire extends player {
-    constructor(name, item) {
-        super(name, item, 'vampire', 100, 100);
+    constructor(item) {
+        super(item, 'vampire', 100, 100);
     };
 
     regen(target) {
         if (this.item.name = 'staff') { // 20% healing from staff
             this.currenthealth += parseInt(((target.currenthealth / 100) * 10) * 1.2);
-            console.log(`${this.name} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
+            console.log(`${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
         } else {
             this.currenthealth += (target.currenthealth / 100) * 10;
-            console.log(`${this.name} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
+            console.log(`${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
         }
     }
 

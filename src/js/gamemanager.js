@@ -4,18 +4,19 @@ function rand(min, max) {
 };
 
 
-(function () {
+// (function () {
 
     function GameManager() {
         let player1 = null;
         let player2 = null;
 
+
         updateLifeBar = () => {
-            console.log(`${player1.name} current health is  ${parseInt(player1.currenthealth)}/${player1.maxHealth} --- ${player2.name} current health is  ${parseInt(player2.currenthealth)}/${player2.maxHealth}  `);
+            console.log(`${player1.race} current health is  ${parseInt(player1.currenthealth)}/${player1.maxHealth} --- ${player2.race} current health is  ${parseInt(player2.currenthealth)}/${player2.maxHealth}  `);
         };
 
-        logs = (attack, defence) => {
-            console.log(`${attack.name} attacked ${defence.name} with ${attack.item.name} dealing ${attack.item.damage} damage `);
+        logs = (attack, defense) => {
+            console.log(`${attack.race} attacked ${defense.race} with ${attack.item.name} dealing ${attack.item.damage} damage `);
         }
         
         player1attack = () => {
@@ -26,7 +27,7 @@ function rand(min, max) {
 
             if (player2.race === 'elf' && rand(0, 100) <= 30) {
                 player1.currenthealth += damage / 2;
-                console.log(`${player2.name} reflected half of the damage taken !`)
+                console.log(`${player2.race} reflected half of the damage taken !`)
                 console.log(damage / 2);
             }
             player2.currenthealth += damage;
@@ -41,20 +42,101 @@ function rand(min, max) {
         };
 
         init = function () {
-            // let player1race = querychoice;
-            // let player2race = querychoice;
-            
-            // let player1item = querychoice;
-            // let player1item = querychoice;
 
             
-            button1 = new sword;
-            button2 = new staff;
-            button3 = new bow;
-            button4 = new boots;
+            // console.log(racePlayer1);
+            // console.log(racePlayer2)
+            
+            ;switch (itemPlayer1) {
+                case 'sword':
+                    itemPlayer1 = new sword ();
+                    break;
+                    
+                case 'bow':
+                    itemPlayer1 = new bow ();
+                    break;
+                    
+                case 'staff':
+                    itemPlayer1 = new staff ();
+                    break;
+                    
+                case 'boots':
+                    itemPlayer1 = new boots ();
+                    break;
+            
+                default:
+                    break;
+            };
+            
+            switch (itemPlayer2) {
+                case 'sword':
+                    itemPlayer2 = new sword ();
+                    break;
+                    
+                case 'bow':
+                    itemPlayer2 = new bow ();
+                    break;
+                    
+                case 'staff':
+                    itemPlayer2 = new staff ();
+                    break;
+                    
+                case 'boots':
+                    itemPlayer2 = new boots ();
+                    break;
+            
+                default:
+                    break;
+            };
 
-            player1 = new orc('Garrosh', button3);
-            player2 = new elf('Sylvanas', button4);
+            // console.log(itemPlayer2);    
+            // console.log(itemPlayer1);    
+            
+            switch (racePlayer1) {
+                case 'orc':
+                    player1 = new orc (itemPlayer1);
+                    break;
+                    
+                case 'humain':
+                    player1 = new human (itemPlayer1);
+                    break;
+                    
+                case 'vampire':
+                    player1 = new vampire (itemPlayer1);
+                    break;
+                    
+                case 'elfe':
+                    player1 = new elf (itemPlayer1);
+                    break;
+            
+                default:
+                    break;
+            };
+
+            switch (racePlayer2) {
+                case 'orc':
+                    player2 = new orc (itemPlayer2);
+                    break;
+                    
+                case 'humain':
+                    player2 = new human (itemPlayer2);
+                    break;
+                    
+                case 'vampire':
+                    player2 = new vampire (itemPlayer2);
+                    break;
+                    
+                case 'elfe':
+                    player2 = new elf (itemPlayer2);
+                    break;
+            
+                default:
+                    break;
+            };
+
+            
+            console.log(player1);    
+            console.log(player2);    
 
             player1.initChar();
             player2.initChar();
@@ -98,10 +180,10 @@ function rand(min, max) {
         endGame = function () {
             if (player1.currenthealth <= 0) {
                 player2.currenthealth = 0;
-                alert(`Congratulation, ${player2.name} won this time ! `);
+                alert(`Congratulation, ${player2.race} won this time ! `);
             } else if (player2.currenthealth <= 0) {
                 player1.currenthealth = 0;
-                alert(`Congratulation, ${player1.name} won this time ! `);
+                alert(`Congratulation, ${player1.race} won this time ! `);
                 console.log(player1.currenthealth);
             };
         };
@@ -109,29 +191,29 @@ function rand(min, max) {
 
 
 
-        init()
-        // for (i = 0; i < 5; i++) {
+        // init()
+        // for (i = 0; i < 2; i++) {
         //     turn();
         //     endGame();
         // };
 
 
-        while(1){
-            turn()
-            endGame()
-                if (player1.currenthealth <= 0 || player2.currenthealth <= 0) {    
-                    let again = confirm('do you want to play again ?');
-                    console.log(again);
+        // while(1){
+        //     turn()
+        //     endGame()
+        //         if (player1.currenthealth <= 0 || player2.currenthealth <= 0) {    
+        //             let again = confirm('do you want to play again ?');
+        //             console.log(again);
             
-                    if (again == true) {
-                        GameManager();
-                    };
-                    return(0);  
-                } // endgame loop ok
-        };
+        //             if (again == true) {
+        //                 GameManager();
+        //             };
+        //             return(0);  
+        //         } // endgame loop ok
+        // };
 
     };
 
-
     GameManager();
-})();
+
+// })();
