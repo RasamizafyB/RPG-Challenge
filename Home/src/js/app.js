@@ -1,5 +1,5 @@
 
-//(function() {
+
 
     var text = document.querySelector('.target').innerText;
     document.querySelector('.target').innerText = '';
@@ -18,8 +18,6 @@
     } else {
         document.querySelector('.target').innerText = '';
     }
-//})();
-
 
 //function to reset the color if something else is picked.
 function playerOnePickedRace(race) {
@@ -47,6 +45,15 @@ function playerOnePickedItem(item) {
     selectedItem1.target.style.borderColor = 'brown'
 }
 
+function playerOnePickedItem(item) {
+    if(selectedItem2) {
+    selectedItem2.target.style.borderColor = '#888'
+    }
+    selectedItem2 = item
+    selectedItem2.target.style.borderColor = 'brown'
+}
+
+
 const races1 = document.querySelector('.race');
 let selectedRace1;
 
@@ -55,6 +62,9 @@ let selectedRace2;
 
 const item1 = document.querySelector('.item');
 let selectedItem1;
+
+const item2 = document.querySelector('.item2');
+let selectedItem2;
 
     //player one select race
 races1.addEventListener('click', (element) => {
@@ -76,6 +86,15 @@ races2.addEventListener('click', (element) => {
 
     //player one select item
 item1.addEventListener('click', (element) => {
+
+    element.target.style.borderColor = 'brown';
+    console.log(element.target);
+
+    playerOnePickedItem(element);
+});
+
+    //player two select item
+item2.addEventListener('click', (element) => {
 
     element.target.style.borderColor = 'brown';
     console.log(element.target);
