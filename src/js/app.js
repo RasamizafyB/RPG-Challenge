@@ -15,7 +15,7 @@ function loop() {
 if (textArray != textArray.length) {
     var tiner = setInterval(loop, 100);
 } else {
-    document.querySelector('.target').innerText = '';
+    tmer = null;
 };
 
 // palyer selections
@@ -112,7 +112,7 @@ races1.addEventListener('click', (element) => {
 
 //player two select race
 races2.addEventListener('click', (element) => {
-    element.target.style.borderColor = 'brown';
+    element.target.style.borderColor = 'blue';
     // console.log(element.target);
 
     playerTwoPickedRace(element);

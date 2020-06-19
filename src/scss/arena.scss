@@ -107,11 +107,11 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            .hit{
+            .hit1{
                 @include actionBTN();
                 @include hit();
             }
-            .heal {
+            .heal1 {
                 @include actionBTN(); 
                 @include heild(); 
             }
@@ -167,11 +167,11 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            .hit{
+            .hit2{ 
                 @include actionBTN();
                 @include hit();
             }
-            .heal {
+            .heal2 {
                 @include actionBTN(); 
                 @include heild(); 
             }

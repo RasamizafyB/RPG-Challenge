@@ -59,7 +59,7 @@ header {
       display: flex;
       justify-content: space-around;
       align-items: center; }
-      .main .player-1 .action-btn .hit {
+      .main .player-1 .action-btn .hit1 {
         font-size: 40px;
         text-decoration: none;
         color: white;
@@ -68,7 +68,7 @@ header {
         padding-bottom: 2%;
         background-color: #682424;
         border: 1px solid #ebd55a; }
-      .main .player-1 .action-btn .heal {
+      .main .player-1 .action-btn .heal1 {
         font-size: 40px;
         text-decoration: none;
         color: white;
@@ -122,7 +122,7 @@ header {
       display: flex;
       justify-content: space-around;
       align-items: center; }
-      .main .player-2 .action-btn .hit {
+      .main .player-2 .action-btn .hit2 {
         font-size: 40px;
         text-decoration: none;
         color: white;
@@ -131,7 +131,7 @@ header {
         padding-bottom: 2%;
         background-color: #682424;
         border: 1px solid #ebd55a; }
-      .main .player-2 .action-btn .heal {
+      .main .player-2 .action-btn .heal2 {
         font-size: 40px;
         text-decoration: none;
         color: white;
