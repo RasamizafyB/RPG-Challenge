@@ -6,20 +6,26 @@ class player {
         this.currenthealth = currenthealth;
         this.maxHealth = maxHealth;
     };
+    
 
     // yield(){
     //     // if button yield press => player conceed
     // }
 
     heal() {
+        let logflow = document.querySelector('body > main > footer > div > div');
+
         if (this.item.name === 'staff') {
             this.currenthealth += 12;
+            logflow.innerHTML += `<p>${this.race} heal for 12</p>` 
         } else {
             this.currenthealth += 10;
+            logflow.innerHTML += `<p>${this.race} heal for 10</p>` 
         };
     };
 
     damage(target) {
+        let logflow = document.querySelector('body > main > footer > div > div');
         let outputDamage = 0
 
         switch (true) {
@@ -27,6 +33,10 @@ class player {
                 if (rand(0, 100) <= 30) {   //bow 30% chance to hit twice
                     outputDamage -= 20;
                     console.log(`${this.name} hitted twice !`);
+
+                    setTimeout(() => {
+                        logflow.innerHTML += `<p>${this.race} hitted twice !</p>`;
+                    },  200)
                     break;
                 } else {
                     outputDamage -= 10;
@@ -49,16 +59,21 @@ class player {
 
         if (target.item.name == 'boots' && rand(0, 100) <= 30) {   //bow 30% dodge chances from boots
             outputDamage = 0;
-            console.log(`${target.name} dodged !`);
+            console.log(`${target.race} dodged !`);
+
+            setTimeout(() => {
+                logflow.innerHTML += `<p>${target.race} dodged !</p>`;
+            },  200)
         };
 
         // console.log(outputDamage)
-
         return (outputDamage);
     };
 
     initChar() {
-        console.log(`im the ${this.race}, I wield a ${this.item.name}, my maximum health point are ${this.currenthealth}`);
+        let logflow = document.querySelector('body > main > footer > div > div');
+        // console.log(`im the ${this.race}, I wield a ${this.item.name}, my maximum health point are ${this.currenthealth}`);w
+        logflow.innerHTML += `<p>im the ${this.race}, I wield a ${this.item.name}, my maximum health point are ${this.currenthealth}</p>`
     };
 };
 
@@ -76,22 +91,26 @@ class elf extends player {
 
 class human extends player {
     constructor(item) {
-        super(item, 'human', 100, 100);
+        super(item, 'human', 90, 90);
     };
 };
 
 class vampire extends player {
     constructor(item) {
-        super(item, 'vampire', 100, 100);
+        super(item, 'vampire', 60, 60);
     };
 
     regen(target) {
+        let logflow = document.querySelector('body > main > footer > div > div');
+
         if (this.item.name = 'staff') { // 20% healing from staff
             this.currenthealth += parseInt(((target.currenthealth / 100) * 10) * 1.2);
             console.log(`${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
+            logflow.innerHTML += `<p>${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}</p>`
         } else {
             this.currenthealth += (target.currenthealth / 100) * 10;
             console.log(`${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}`);
+            logflow.innerHTML += `<p>${this.race} lifesteal for  ${parseInt(((target.currenthealth / 100) * 10) * 1.2)}</p>`
         };
     };
 
