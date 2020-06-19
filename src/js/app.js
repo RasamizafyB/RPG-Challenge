@@ -46,7 +46,7 @@ function playerOnePickedRace(race) {
     selectedRace1.target.style.borderColor = 'brown';
 
     racePlayer1 = race.target.getAttribute('src');
-    racePlayer1 = racePlayer1.substring(11, racePlayer1.length -4);
+    racePlayer1 = racePlayer1.substring(10, racePlayer1.length -4);
     
     console.log(racePlayer1);
     localStorage.setItem('raceplayer1', racePlayer1);
@@ -62,7 +62,7 @@ function playerTwoPickedRace(race) {
     selectedRace2.target.style.borderColor = 'blue';
 
     racePlayer2 = race.target.getAttribute('src');
-    racePlayer2 = racePlayer2.substring(11, racePlayer2.length -4);
+    racePlayer2 = racePlayer2.substring(10, racePlayer2.length -4);
     
     console.log(racePlayer2);
     localStorage.setItem('raceplayer2', racePlayer2);
@@ -78,7 +78,7 @@ function playerOnePickedItem(item) {
     selectedItem1.target.style.borderColor = 'brown';
 
     itemPlayer1 = item.target.getAttribute('src');
-    itemPlayer1 = itemPlayer1.substring(10, itemPlayer1.length -4);
+    itemPlayer1 = itemPlayer1.substring(9, itemPlayer1.length -4);
     
     console.log(itemPlayer1);
     localStorage.setItem('itemplayer1', itemPlayer1);
@@ -94,7 +94,7 @@ function playerTwoPickedItem(item) {
     selectedItem2.target.style.borderColor = 'blue';
 
     itemPlayer2 = item.target.getAttribute('src');
-    itemPlayer2 = itemPlayer2.substring(10, itemPlayer2.length -4);
+    itemPlayer2 = itemPlayer2.substring(9, itemPlayer2.length -4);
     
     console.log(itemPlayer2);
     localStorage.setItem('itemplayer2', itemPlayer2);
