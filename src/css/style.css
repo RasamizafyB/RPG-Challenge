@@ -3,7 +3,7 @@
   src: url(../font/Blackletter.ttf); }
 
 body {
-  background-image: url(/src/image/wallpaper.jpg);
+  background-image: url(../image/wallpaper.jpg);
   background-repeat: no-repeat;
   background-position: center; }
 
