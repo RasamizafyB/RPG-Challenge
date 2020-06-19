@@ -2,6 +2,38 @@
   font-family: "Medieval";
   src: url("src/font/Berkahi Blackletter.ttf"); }
 
+@keyframes player1 {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateX(-1000px); }
+  50% {
+    transform: translateX(275px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes player2 {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateX(1000px); }
+  50% {
+    transform: translateX(-275px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes logGame {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateY(1000px); }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes vs {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateY(1000px); }
+  100% {
+    transform: translateY(0px); } }
+
 body {
   background-image: url(../image/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -24,6 +56,7 @@ header {
   display: flex;
   justify-content: space-around; }
   .main .player-1 {
+    animation: player1 1s;
     display: grid;
     grid-template-columns: 0.5fr 5fr;
     grid-template-rows: 0.15fr 5fr 0.1fr 0.15fr;
@@ -53,6 +86,8 @@ header {
       .main .player-1 .health-bar .file {
         height: 20px;
         width: 100%; }
+    .main .player-1 .hit1:active .img-name {
+      animation: masuperanimation 1s; }
     .main .player-1 .action-btn {
       grid-area: btn;
       text-align: center;
@@ -87,6 +122,7 @@ header {
         text-decoration: none;
         color: black; }
   .main .player-2 {
+    animation: player2 1s;
     display: grid;
     grid-template-columns: 5fr 0.5fr;
     grid-template-rows: 0.15fr 5fr 0.07fr 0.15fr;
@@ -152,6 +188,7 @@ header {
         color: black; }
 
 .log {
+  animation: logGame 2s;
   border: 2px solid white;
   margin: -5% 37% 0% 37%;
   height: 230px; }

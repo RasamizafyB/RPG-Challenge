@@ -101,11 +101,6 @@ function GameManager() {
         switch (racePlayer1) {
             case 'orc':
                 player1 = new orc(itemPlayer1);
-                document.querySelector('img') = '';
-                let img = document.createElement('img')
-                img.src = 'src/image/orc.jpg'
-                var block = document.getElementById("source");
-                block.appendChild(img);
                 break;
 
             case 'humain':
@@ -171,16 +166,12 @@ function GameManager() {
 
         // player2.heal();
         
-        document.querySelector('.hit1').addEventListener('click', function(){
             logs(player1, player2);
             player1attack()
-        });
 
 
-        document.querySelector('.hit2').addEventListener('click', function(){
             logs(player2, player1);
             player2attack()
-        });
 
         // updateLifeBar();
 
