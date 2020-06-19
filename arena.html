@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/arena.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <title>le porg de meuporg</title>
+
+    <script src='src/js/items.js'></script>
+    <script src='src/js/player.js'></script>
+    <script src='src/js/gamemanager.js'></script>
+</head>
+<body>
+    <header>
+        <h1>MEUPORG</h1>
+    </header>
+    <main>
+                
+        <!--Fight page-->
+
+        <section class="main">
+
+            <!--player 1-->
+
+            <section class="player-1">
+                <div class="name">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="img-name">
+                    <img src="src/image/humain.jpg" alt="">
+                </div>
+                <div class="health-bar">
+                    <label for="file"></label> 
+                    <progress class='file' value="100" max="100"> 32% </progress>
+                </div>
+                <div class="yield-btn">
+                    <a href="./index.html" class="yield-1">X</a>
+                </div>
+                <div class="action-btn">
+                    <a href="#" class="hit1" onclick="player1attack()">Hit</a>
+                    <a href="#" class="heal1" onclick="player1heal()">Heal</a>
+                    
+                </div>
+            </section>
+
+            <!--VS
+
+            <section>
+                <img src="" alt="">
+            </section>
+            -->
+            <!--player 2-->
+
+            <section class="player-2">
+                <div class="name">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="img-name">
+                    <img src="src/image/humain.jpg" alt="">
+                </div>
+                <div class="health-bar">
+                    <label for="file"></label>
+                    <progress class='file' value="100" max="100"> 32% </progress>
+                </div>
+                <div class="yield-btn">
+                    <a href="./index.html" class="yield-1">X</a>
+                </div>
+                <div class="action-btn">
+                    <a href="#" class="hit2" onclick="player2attack()">Hit</a>
+                    <a href="#" class="heal2" onclick="player2heal()">Heal</a>
+                </div>
+            </section>
+        </section>
+
+    <!--LOG-->
+
+    <footer>
+        <div class="log">
+            <h1>Evenement</h1>
+            <div class="log-flow">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

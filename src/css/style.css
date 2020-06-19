@@ -46,7 +46,7 @@ section.home {
       color: black;
       font-size: 30px;
       padding: 5%;
-      text-align: justify; }
+      text-align: center; }
   section.home .race {
     grid-area: race;
     display: grid;
