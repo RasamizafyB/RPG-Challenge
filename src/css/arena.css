@@ -1,6 +1,35 @@
 @font-face {
+  font-family: Meuprog;
+  src: url(../font/Blackletter.ttf); }
+
+@font-face {
   font-family: "Medieval";
   src: url("src/font/Berkahi Blackletter.ttf"); }
+
+@keyframes player1 {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateX(-1000px); }
+  50% {
+    transform: translateX(275px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes player2 {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateX(1000px); }
+  50% {
+    transform: translateX(-275px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes logGame {
+  /* Tous les autres navigateurs */
+  0% {
+    transform: translateY(1000px); }
+  100% {
+    transform: translateY(0px); } }
 
 body {
   background-image: url(../image/wallpaper.jpg);
@@ -11,6 +40,7 @@ header {
   text-align: center;
   color: white; }
   header h1 {
+    font-family: Meuprog;
     font-size: 80px;
     font-weight: 700;
     font-style: italic;
@@ -24,6 +54,7 @@ header {
   display: flex;
   justify-content: space-around; }
   .main .player-1 {
+    animation: player1 1s;
     display: grid;
     grid-template-columns: 0.5fr 5fr;
     grid-template-rows: 0.15fr 5fr 0.1fr 0.15fr;
@@ -36,6 +67,8 @@ header {
         font-size: 30px;
         border: 5px solid #997d00;
         text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-family: Meuprog;
+        text-transform: uppercase;
         background-color: #ff6600; }
     .main .player-1 .img-name {
       grid-area: player;
@@ -53,6 +86,8 @@ header {
       .main .player-1 .health-bar .file {
         height: 20px;
         width: 100%; }
+    .main .player-1 .hit1:active .img-name {
+      animation: masuperanimation 1s; }
     .main .player-1 .action-btn {
       grid-area: btn;
       text-align: center;
@@ -86,7 +121,15 @@ header {
         border-radius: 50%;
         text-decoration: none;
         color: black; }
+  .main .vs {
+    width: 300px;
+    display: flex;
+    align-items: center; }
+    .main .vs img {
+      width: 300px;
+      height: 300px; }
   .main .player-2 {
+    animation: player2 1s;
     display: grid;
     grid-template-columns: 5fr 0.5fr;
     grid-template-rows: 0.15fr 5fr 0.07fr 0.15fr;
@@ -99,6 +142,8 @@ header {
         font-size: 30px;
         border: 5px solid #997d00;
         text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-family: Meuprog;
+        text-transform: uppercase;
         background-color: #005e75; }
     .main .player-2 .img-name {
       grid-area: player;
@@ -152,8 +197,9 @@ header {
         color: black; }
 
 .log {
+  animation: logGame 2s;
   border: 2px solid white;
-  margin: -5% 37% 0% 37%;
+  margin: -5% 30% 0% 30%;
   height: 230px; }
   .log h1 {
     border-bottom: 2px solid white;

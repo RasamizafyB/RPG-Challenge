@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Meuprog;
+  src: url(../font/Blackletter.ttf); }
+
 body {
   background-image: url(/src/image/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -11,6 +15,7 @@ header {
   text-align: center;
   color: white; }
   header h1 {
+    font-family: Meuprog;
     font-size: 80px;
     font-size: 80px;
     font-weight: 700;
@@ -35,18 +40,21 @@ section.home {
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 20%;
-    padding: 20% 5% 5% 5%;
+    padding: 20% 10% 10% 10%;
     overflow: auto;
-    font-style: italic; }
+    font-style: italic;
+    font-family: Meuprog; }
     section.home .welcome h1 {
-      color: #48cae3;
+      color: black;
       font-size: 70px;
-      margin-bottom: 2%; }
+      margin-bottom: 2%;
+      text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; }
     section.home .welcome p {
       color: black;
       font-size: 30px;
       padding: 5%;
-      text-align: center; }
+      text-align: center;
+      word-spacing: 10px; }
   section.home .race {
     grid-area: race;
     display: grid;
@@ -71,10 +79,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race .orc .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 100%;
+          font-family: Meuprog;
           color: #004b00; }
     section.home .race .human {
       grid-column: 2;
@@ -95,10 +104,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race .human .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 112%;
+          font-family: Meuprog;
           color: #5f4827; }
     section.home .race .vampire {
       grid-column: 1;
@@ -119,10 +129,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race .vampire .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 90%;
+          font-family: Meuprog;
           color: #949494; }
         section.home .race .vampire .hover p {
           padding-left: 5%;
@@ -146,10 +157,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race .elfe .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 80%;
+          font-family: Meuprog;
           color: #b347a1; }
         section.home .race .elfe .hover p {
           padding-left: 6%;
@@ -261,10 +273,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race2 .orc .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 100%;
+          font-family: Meuprog;
           color: #004b00; }
     section.home .race2 .human {
       grid-column: 2;
@@ -285,10 +298,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race2 .human .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 112%;
+          font-family: Meuprog;
           color: #5f4827; }
     section.home .race2 .vampire {
       grid-column: 1;
@@ -309,10 +323,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race2 .vampire .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 90%;
+          font-family: Meuprog;
           color: #949494; }
         section.home .race2 .vampire .hover p {
           padding-left: 5%;
@@ -336,10 +351,11 @@ section.home {
         color: white;
         text-align: center; }
         section.home .race2 .elfe .hover h2 {
-          margin-top: 7%;
+          margin-top: 10%;
           font-size: 30px;
           font-weight: 800;
           margin-bottom: 80%;
+          font-family: Meuprog;
           color: #b347a1; }
         section.home .race2 .elfe .hover p {
           padding-left: 6%;
@@ -432,6 +448,7 @@ section.home {
     grid-area: play;
     position: relative; }
     section.home .play a {
+      font-family: Meuprog;
       position: absolute;
       top: 30%;
       left: 29%;

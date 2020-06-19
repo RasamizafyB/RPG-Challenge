@@ -14,7 +14,6 @@ setTimeout(() => {
 function GameManager() {
     let player1 = null;
     let player2 = null;
-    let i = 0;
 
 
     updateLifeBar = () => {
@@ -40,8 +39,8 @@ function GameManager() {
 
     logs = (attack, defense) => {
         let logflow = document.querySelector('body > main > footer > div > div');
-        let humandef = (attack.item.damage/100)*80
-        console.log(`${attack.race} attacked ${defense.race} with ${attack.item.name} dealing ${attack.item.damage} damage `);
+        let humandef = (attack.item.damage / 100) * 80
+        // console.log(`${attack.race} attacked ${defense.race} with ${attack.item.name} dealing ${attack.item.damage} damage `);
 
 
         if (defense.race == 'human') { // human 20% damage reduction
@@ -60,10 +59,10 @@ function GameManager() {
         let itemPlayer1 = localStorage.getItem('itemplayer1');
         let racePlayer2 = localStorage.getItem('raceplayer2');
         let itemPlayer2 = localStorage.getItem('itemplayer2');
-        console.log(racePlayer1);
-        console.log(itemPlayer1);
-        console.log(racePlayer2);
-        console.log(itemPlayer2);
+        // console.log(racePlayer1);
+        // console.log(itemPlayer1);
+        // console.log(racePlayer2);
+        // console.log(itemPlayer2);
         document.querySelector('section.player-1 > div.img-name > img').setAttribute('src', `src/image/${racePlayer1}.jpg`);
         document.querySelector('section.player-2 > div.img-name > img').setAttribute('src', `src/image/${racePlayer2}.jpg`);
         document.querySelector('section.player-1 > div.name > h3').innerText = racePlayer1;
@@ -90,7 +89,7 @@ function GameManager() {
 
             default:
                 break;
-        };  
+        };
 
         switch (itemPlayer2) {
             case 'sword':
@@ -169,16 +168,19 @@ function GameManager() {
     };
 
 
+    let i = 1;
+
     turn = function () {
         let logflow = document.querySelector('body > main > footer > div > div');
+        updateLifeBar();
 
         player1attack = () => {
             logs(player1, player2);
 
             let damage = player1.damage(player2);
-             (damage);
+            (damage);
 
-             if (player2.race === 'elf' && rand(0, 100) <= 30) {
+            if (player2.race === 'elf' && rand(0, 100) <= 30) {
                 player1.currenthealth += damage / 2;
                 console.log(damage / 2);
 
@@ -189,9 +191,8 @@ function GameManager() {
 
             player2.currenthealth += damage;
             updateLifeBar();
-            i++;
-            turn();
-            console.log(damage);
+            endturn();
+            // console.log(damage);
         };
 
         player2attack = () => {
@@ -207,39 +208,61 @@ function GameManager() {
                     logflow.innerHTML += `<p>${player1.race} reflected half of the damage taken !</p>`;
                 }, 250)
             }
-            
+
             player1.currenthealth += damage;
-            
+
             updateLifeBar();
-            i++;
-            turn();
-            console.log(damage);
+            endturn();
+            console.log(i);
+            // console.log(damage);
         };
 
         player1heal = () => {
             player1.heal();
             updateLifeBar();
-            i++;
-            turn();
+            endturn();
         }
 
         player2heal = () => {
             player2.heal();
             updateLifeBar();
-            i++;
-            turn();
+            endturn();
         }
 
+        document.querySelector('section.player-1 > div.action-btn > a.hit1').addEventListener('click', () => {
+            player1attack();
+            endturn();
+        });
 
-        if (i == 0) {
+        document.querySelector('section.player-2 > div.action-btn > a.hit2').addEventListener('click', () => {
+            player2attack();
+        });
+
+        document.querySelector('section.player-1 > div.action-btn > a.heal1').addEventListener('click', () => {
+            player1heal();
+            endturn();
+        });
+
+        document.querySelector('section.player-2 > div.action-btn > a.heal2').addEventListener('click', () => {
+            player2heal();
+            endturn();
+        });
+
+        endturn();
+    };
+
+    endturn = () => {
+        if (i === 1) {
             document.querySelector('section.player-2 > div.action-btn').setAttribute('style', 'display: none;');
             document.querySelector('section.player-1 > div.action-btn').setAttribute('style', 'display: flex;');
-
-        } else if (i <= 1) {
+            i++;
+        } else if (i === 2) {
             document.querySelector('section.player-1 > div.action-btn').setAttribute('style', 'display: none;');
             document.querySelector('section.player-2 > div.action-btn').setAttribute('style', 'display: flex;');
+            i++;
+            // console.log(i);
 
-        } else {
+        } else if (i >= 3) {
             if (player1.race === 'vampire') {
                 player1.regen(player2);
             } else if (player2.race === 'vampire') {
@@ -248,15 +271,9 @@ function GameManager() {
 
             updateLifeBar();
             endGame();
-
-            i = 0;
-            turn()
+            i = 1;
         }
-
-
-    };
-
-
+    }
 
     endGame = function () {
         let again;

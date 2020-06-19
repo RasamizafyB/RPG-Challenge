@@ -13,10 +13,11 @@ $vampire : rgb(148, 148, 148);
         text-align: center;
 }
 @mixin h2($bottom) {
-    margin-top: 7%;
+    margin-top: 10%;
     font-size: 30px;
     font-weight: 800;
     margin-bottom: $bottom;
+    font-family: Meuprog;
 }
 @mixin position {
     margin: 2% auto;
@@ -43,6 +44,10 @@ $vampire : rgb(148, 148, 148);
         border: 15px solid rgb(48, 48, 48);
     }
 }
+@font-face{
+    font-family: Meuprog;
+    src: url(../font/Blackletter.ttf);
+}
 
 body {
     background-image: url(/src/image/wallpaper.jpg);
@@ -54,10 +59,12 @@ img {
     max-width: 300px;
     max-height: 300px;
 }
+
 header {
     text-align: center;
     color: white;
     h1 {
+        font-family: Meuprog;
         font-size: 80px;
         font-size: 80px;
         font-weight: 700;
@@ -87,19 +94,22 @@ section.home {
         background-repeat: no-repeat; 
         background-size: contain; 
         margin-top: 20%;
-        padding: 20% 5% 5% 5%;
+        padding: 20% 10% 10% 10%;
         overflow: auto;
         font-style: italic;
+        font-family: Meuprog;
         h1 {
-            color: #48cae3; 
+            color: black; 
             font-size: 70px;
-            margin-bottom: 2%;   
+            margin-bottom: 2%;
+            text-shadow:   1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;   
         }
         p{
             color: black; 
             font-size: 30px; 
             padding: 5%;  
-            text-align: center;      
+            text-align: center; 
+            word-spacing: 10px;     
         }
     }
     .race  {
@@ -359,6 +369,7 @@ section.home {
         grid-area: play;
         position: relative;;
         a { 
+            font-family: Meuprog;
             position: absolute;
             top: 30%;
             left: 29%;

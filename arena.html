@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <title>le porg de meuporg</title>
 
+    <script src='src/js/animationarena.js'></script>
     <script src='src/js/items.js'></script>
     <script src='src/js/player.js'></script>
     <script src='src/js/gamemanager.js'></script>
@@ -16,7 +17,7 @@
         <h1>MEUPORG</h1>
     </header>
     <main>
-                
+
         <!--Fight page-->
 
         <section class="main">
@@ -31,25 +32,25 @@
                     <img src="src/image/humain.jpg" alt="">
                 </div>
                 <div class="health-bar">
-                    <label for="file"></label> 
-                    <progress class='file' value="100" max="100"> 32% </progress>
+                    <label for="file"></label>
+                    <progress class='file' id="file" value="32" max="100"> 32% </progress>
                 </div>
                 <div class="yield-btn">
                     <a href="./index.html" class="yield-1">X</a>
                 </div>
                 <div class="action-btn">
-                    <a href="#" class="hit1" onclick="player1attack()">Hit</a>
-                    <a href="#" class="heal1" onclick="player1heal()">Heal</a>
-                    
+                    <a href="#" class="hit1" onclick="moveHit1()">Hit</a>
+                    <a href="#" class="heal1" onclick="moveHial1()">Heal</a>
+
                 </div>
             </section>
 
-            <!--VS
+            <!--VS-->
 
-            <section>
-                <img src="" alt="">
+            <section class="vs">
+                <img src="src/image/vs.png" alt="vs">
             </section>
-            -->
+
             <!--player 2-->
 
             <section class="player-2">
@@ -61,14 +62,14 @@
                 </div>
                 <div class="health-bar">
                     <label for="file"></label>
-                    <progress class='file' value="100" max="100"> 32% </progress>
+                    <progress class='file' id="file" value="32" max="100"> 32% </progress>
                 </div>
                 <div class="yield-btn">
                     <a href="./index.html" class="yield-1">X</a>
                 </div>
                 <div class="action-btn">
-                    <a href="#" class="hit2" onclick="player2attack()">Hit</a>
-                    <a href="#" class="heal2" onclick="player2heal()">Heal</a>
+                    <a href="#" class="heal2" onclick="moveHial2()">Heal</a>
+                    <a href="#" class="hit2" onclick="moveHit2()">Hit</a>
                 </div>
             </section>
         </section>

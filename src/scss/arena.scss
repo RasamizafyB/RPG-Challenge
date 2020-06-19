@@ -1,10 +1,15 @@
 
+@font-face{
+    font-family: Meuprog;
+    src: url(../font/Blackletter.ttf);
+}
 @mixin nameH3 {
     padding: 5%;
     font-size: 30px;
     border: 5px solid #997d00;
-    //font-family: "Medieval";
     text-shadow:   1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: Meuprog;
+    text-transform: uppercase;
 }
 @font-face {
     font-family: "Medieval";
@@ -38,20 +43,47 @@
     text-decoration: none;
     color: black;
 }
+@keyframes player1 { /* Tous les autres navigateurs */
+    0% {
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(275px)
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes player2 { /* Tous les autres navigateurs */
+    0% {
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateX(-275px)
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes logGame { /* Tous les autres navigateurs */
+    0% {
+        transform: translateY(1000px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 body {
     background-image: url(../image/wallpaper.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-// img {
-//     max-width: 300px;
-//     max-height: 300px;
-// }
 header {
     text-align: center;
     color: white;
     h1 {
+        font-family: Meuprog;
         font-size: 80px;
         font-weight: 700;
         font-style: italic;
@@ -66,6 +98,7 @@ header {
     display: flex;
     justify-content: space-around;
     .player-1 {
+        animation: player1 1s;
         display: grid;
         grid-template-columns: 0.5fr 5fr;
         grid-template-rows: 0.15fr 5fr 0.1fr 0.15fr;
@@ -100,6 +133,11 @@ header {
                 width: 100%;
             }
         }
+        .hit1:active{
+            .img-name{
+                animation: masuperanimation 1s;
+            }
+        }
         
         .action-btn {
             grid-area: btn; 
@@ -125,7 +163,17 @@ header {
         }
 
     }
+    .vs{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    }
     .player-2 {
+        animation: player2 1s;
         display: grid;
         grid-template-columns: 5fr 0.5fr ;
         grid-template-rows: 0.15fr 5fr 0.07fr 0.15fr;
@@ -189,8 +237,9 @@ header {
     
 }
 .log{
+    animation: logGame 2s;
     border: 2px solid white;
-    margin: -5% 37% 0% 37%;
+    margin: -5% 30% 0% 30%;
     height: 230px;
     h1{
         border-bottom: 2px solid white;
