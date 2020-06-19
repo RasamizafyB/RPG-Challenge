@@ -11,7 +11,7 @@
   0% {
     transform: translateX(-1000px); }
   50% {
-    transform: translateX(275px); }
+    transform: translateX(400px); }
   100% {
     transform: translateX(0px); } }
 
@@ -20,7 +20,7 @@
   0% {
     transform: translateX(1000px); }
   50% {
-    transform: translateX(-275px); }
+    transform: translateX(-400px); }
   100% {
     transform: translateX(0px); } }
 
@@ -199,8 +199,8 @@ header {
 .log {
   animation: logGame 2s;
   border: 2px solid white;
-  margin: -5% 30% 0% 30%;
-  height: 230px; }
+  margin: -4% 30% 0% 30%;
+  height: 200px; }
   .log h1 {
     border-bottom: 2px solid white;
     color: white;
@@ -210,6 +210,6 @@ header {
     padding-bottom: 0.5%; }
   .log .log-flow {
     overflow: auto;
-    height: 205px; }
+    height: 170px; }
     .log .log-flow p {
       color: white; }

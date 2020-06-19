@@ -4,7 +4,7 @@ let race2
 
 function moveHit1(){
     race1 = document.querySelector("body > main > section > section.player-1 > div.img-name > img")
-    race1.style.transform = "translateX(570px)";
+    race1.style.transform = "translateX(800px)";
 
     race2 = document.querySelector("body > main > section > section.player-2 > div.img-name > img");
     race2.style.borderColor = "red"; 
@@ -29,7 +29,7 @@ function moveHial1(){
 
 function moveHit2(){
     race2 = document.querySelector("body > main > section > section.player-2 > div.img-name > img");
-    race2.style.transform = "translateX(-570px)"; 
+    race2.style.transform = "translateX(-800px)"; 
 
     race1 = document.querySelector("body > main > section > section.player-1 > div.img-name > img");
     race1.style.borderColor = "red";
