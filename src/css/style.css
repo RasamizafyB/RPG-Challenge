@@ -35,7 +35,7 @@ section.home {
   section.home .welcome {
     grid-area: welcome;
     text-align: center;
-    background-image: url(/src/image/rustic.png);
+    background-image: url(../image/rustic.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
