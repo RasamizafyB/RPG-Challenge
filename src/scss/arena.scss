@@ -1,10 +1,15 @@
 
+@font-face{
+    font-family: Meuprog;
+    src: url(../font/Blackletter.ttf);
+}
 @mixin nameH3 {
     padding: 5%;
     font-size: 30px;
     border: 5px solid #997d00;
-    //font-family: "Medieval";
     text-shadow:   1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: Meuprog;
+    text-transform: uppercase;
 }
 @font-face {
     font-family: "Medieval";
@@ -68,28 +73,17 @@
         transform: translateY(0px);
     }
 }
-@keyframes vs { /* Tous les autres navigateurs */
-    0% {
-        transform: translateY(1000px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
 body {
     background-image: url(../image/wallpaper.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-// img {
-//     max-width: 300px;
-//     max-height: 300px;
-// }
 header {
     text-align: center;
     color: white;
     h1 {
+        font-family: Meuprog;
         font-size: 80px;
         font-weight: 700;
         font-style: italic;
@@ -129,9 +123,6 @@ header {
             img {
                 @include img();
             }
-            // &:hover{
-            //     animation: masuperanimation 1s;
-            // }
         }
         .health-bar {
             grid-area: health;
@@ -171,6 +162,15 @@ header {
             }
         }
 
+    }
+    .vs{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 300px;
+            height: 300px;
+        }
     }
     .player-2 {
         animation: player2 1s;
@@ -239,7 +239,7 @@ header {
 .log{
     animation: logGame 2s;
     border: 2px solid white;
-    margin: -5% 37% 0% 37%;
+    margin: -5% 30% 0% 30%;
     height: 230px;
     h1{
         border-bottom: 2px solid white;

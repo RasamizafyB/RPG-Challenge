@@ -1,4 +1,8 @@
 @font-face {
+  font-family: Meuprog;
+  src: url(../font/Blackletter.ttf); }
+
+@font-face {
   font-family: "Medieval";
   src: url("src/font/Berkahi Blackletter.ttf"); }
 
@@ -27,13 +31,6 @@
   100% {
     transform: translateY(0px); } }
 
-@keyframes vs {
-  /* Tous les autres navigateurs */
-  0% {
-    transform: translateY(1000px); }
-  100% {
-    transform: translateY(0px); } }
-
 body {
   background-image: url(../image/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -43,6 +40,7 @@ header {
   text-align: center;
   color: white; }
   header h1 {
+    font-family: Meuprog;
     font-size: 80px;
     font-weight: 700;
     font-style: italic;
@@ -69,6 +67,8 @@ header {
         font-size: 30px;
         border: 5px solid #997d00;
         text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-family: Meuprog;
+        text-transform: uppercase;
         background-color: #ff6600; }
     .main .player-1 .img-name {
       grid-area: player;
@@ -121,6 +121,13 @@ header {
         border-radius: 50%;
         text-decoration: none;
         color: black; }
+  .main .vs {
+    width: 300px;
+    display: flex;
+    align-items: center; }
+    .main .vs img {
+      width: 300px;
+      height: 300px; }
   .main .player-2 {
     animation: player2 1s;
     display: grid;
@@ -135,6 +142,8 @@ header {
         font-size: 30px;
         border: 5px solid #997d00;
         text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-family: Meuprog;
+        text-transform: uppercase;
         background-color: #005e75; }
     .main .player-2 .img-name {
       grid-area: player;
@@ -190,7 +199,7 @@ header {
 .log {
   animation: logGame 2s;
   border: 2px solid white;
-  margin: -5% 37% 0% 37%;
+  margin: -5% 30% 0% 30%;
   height: 230px; }
   .log h1 {
     border-bottom: 2px solid white;
