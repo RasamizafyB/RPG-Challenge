@@ -46,7 +46,7 @@ function playerOnePickedRace(race) {
     selectedRace1.target.style.borderColor = 'brown';
 
     racePlayer1 = race.target.getAttribute('src');
-    racePlayer1 = racePlayer1.substring(9, racePlayer1.length -4);
+    racePlayer1 = racePlayer1.substring(10, racePlayer1.length -4);
     
     console.log(racePlayer1);
     localStorage.setItem('raceplayer1', racePlayer1);
@@ -62,7 +62,7 @@ function playerTwoPickedRace(race) {
     selectedRace2.target.style.borderColor = 'blue';
 
     racePlayer2 = race.target.getAttribute('src');
-    racePlayer2 = racePlayer2.substring(9, racePlayer2.length -4);
+    racePlayer2 = racePlayer2.substring(10, racePlayer2.length -4);
     
     console.log(racePlayer2);
     localStorage.setItem('raceplayer2', racePlayer2);
